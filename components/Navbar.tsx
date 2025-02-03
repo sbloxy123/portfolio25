@@ -3,15 +3,43 @@
 import IconLinks from '@/components/icons/IconLinks';
 import Menu from './Menu';
 import { useState } from 'react';
+import Link from 'next/link';
+import { useTitleNav } from '@/contexts/TitleNavContext';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const { isTitleInNav } = useTitleNav();
+  const pathname = usePathname();
+
+  const closeMenu = () => {
+    setToggleMenu(false);
+  };
   return (
     <header
-      className={`header fixed left-0 right-0 top-0 z-20 mx-auto flex w-full items-center justify-between border-b-2 border-[rgba(var(--green-opac),0.5)] py-20 backdrop-blur-sm xsmall:py-20 small:px-layout-small ${toggleMenu ? 'bg-transparent' : 'bg-[rgba(var(--background),0.3)]'}`}
+      className={`header fixed left-0 right-0 top-0 z-20 mx-auto flex min-h-[103px] w-full items-center justify-between border-b-2 border-[rgba(var(--green-opac),0.5)] px-[5%] py-[3rem] backdrop-blur-sm xsmall:py-[3rem] small:px-layout-small ${toggleMenu ? 'bg-transparent' : 'bg-[rgba(var(--background),0.3)]'} `}
     >
+      <Link
+        href="/"
+        aria-label="Link to homepage"
+        className={`name__title relative font-font_anonymous text-[clamp(2.5rem,1.9vw,3.6rem)] transition-opacity duration-300 ${isTitleInNav ? 'opacity-100' : pathname == '/' ? 'opacity-0' : 'opacity-100'}`}
+      >
+        Stuart Bloxham
+        <span className="">
+          {pathname === '/' ? (
+            '.'
+          ) : (
+            <>
+              <span className="pointer-events-none absolute bottom-0 left-full top-0 m-auto hidden h-fit translate-y-1 pl-4 text-[0.5em] font-semibold uppercase leading-none tracking-[0.1em] text-theme_green opacity-50 small:inline">
+                {pathname}
+              </span>
+              <span className="small:hidden">.</span>
+            </>
+          )}
+        </span>
+      </Link>
       <div
-        className={`icon__links absolute bottom-0 left-[5%] right-0 top-0 z-20 m-auto ml-0 h-fit w-fit transition-opacity duration-500 xsmall:left-0 xsmall:ml-auto ${
+        className={`icon__links tablet:block absolute bottom-0 left-[5%] right-0 top-0 z-20 m-auto ml-0 hidden h-fit w-fit transition-opacity duration-500 xsmall:left-0 xsmall:ml-auto ${
           toggleMenu ? 'pointer-events-none opacity-0' : 'opacity-100 delay-300'
         }`}
       >
@@ -38,14 +66,14 @@ const Navbar = () => {
         ></button>
 
         <div
-          className={`menu fixed right-0 top-0 z-10 w-[55vw] min-w-[340px] max-w-[700px] items-end justify-end transition-all delay-200 duration-300 before:absolute before:inset-0 before:-z-10 before:bg-foreground before:opacity-10 before:backdrop-blur-3xl before:content-[""] small:-right-[clamp(7rem,7vw,12rem)] ${toggleMenu ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}
+          className={`menu fixed right-0 top-0 z-10 w-[70vw] min-w-[340px] max-w-[700px] items-end justify-end transition-all delay-200 duration-300 before:absolute before:inset-0 before:-z-10 before:bg-foreground before:opacity-10 before:backdrop-blur-3xl before:content-[""] small:-right-[clamp(7rem,7vw,12rem)] ${toggleMenu ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}
         >
           <div
             className={`menu__icon__links absolute bottom-auto left-[5%] right-auto top-12 z-20 m-auto ml-auto h-fit w-[50vw] max-w-[700px] translate-y-2 transition-opacity duration-1000 ${toggleMenu ? 'opacity-100' : 'opacity-0'}`}
           >
             <IconLinks menuIsOpen={toggleMenu} />
           </div>
-          <Menu menuIsOpen={toggleMenu} />
+          <Menu menuIsOpen={toggleMenu} closeMenu={closeMenu} />
         </div>
       </div>
     </header>

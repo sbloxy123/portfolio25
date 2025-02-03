@@ -26,12 +26,21 @@ const menuItem = {
   show: { opacity: 1, x: 0 },
 };
 
-const MenuItem = ({ href, children }: { href: string; children: string }) => {
+const MenuItem = ({
+  href,
+  children,
+  closeMenu,
+}: {
+  href: string;
+  children: string;
+  closeMenu: () => void;
+}) => {
   return (
     <motion.li variants={menuItem}>
       <Link
         href={href}
         className="ml-auto block w-fit font-font_anonymous text-[4.8rem] uppercase text-foreground transition-colors duration-300 hover:text-theme_green"
+        onClick={() => closeMenu()}
       >
         {children}
       </Link>
@@ -39,7 +48,7 @@ const MenuItem = ({ href, children }: { href: string; children: string }) => {
   );
 };
 
-const Menu = ({ menuIsOpen }: { menuIsOpen: boolean }) => {
+const Menu = ({ menuIsOpen, closeMenu }: { menuIsOpen: boolean; closeMenu: () => void }) => {
   return (
     <motion.ul
       variants={menuContainer}
@@ -48,7 +57,7 @@ const Menu = ({ menuIsOpen }: { menuIsOpen: boolean }) => {
       className={`menu__list block h-screen pr-[5vw] pt-[150px] small:mr-[clamp(7rem,7vw,12rem)] small:pr-[clamp(7rem,7vw,12rem)] ${menuIsOpen ? 'active' : ''}`}
     >
       {menuItems.map((item, index) => (
-        <MenuItem key={index} href={item.href}>
+        <MenuItem key={index} href={item.href} closeMenu={closeMenu}>
           {item.title}
         </MenuItem>
       ))}

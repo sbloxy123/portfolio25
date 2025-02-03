@@ -133,12 +133,12 @@ ul {
     position: sticky;
     top: 35px;
     .name__title {
-      position: fixed;
+      /* position: fixed;
       top: 35px;
-      z-index: 100;
+      z-index: 100; */
     }
     .fed__title {
-      padding-top: 10rem;
+      padding-top: 8rem;
       font-size: clamp(6rem, 5.8cqw, 7rem);
     }
   }

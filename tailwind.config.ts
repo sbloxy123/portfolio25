@@ -10,6 +10,7 @@ export default {
     extend: {
       screens: {
         xsmall: '512px',
+        tablet: '768px',
         small: '1024px',
         overSmall: '1145px',
         medium: '1280px',

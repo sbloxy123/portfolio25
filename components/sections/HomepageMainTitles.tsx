@@ -1,9 +1,11 @@
 'use client';
 import { useEffect, useState, useRef } from 'react';
+import { useTitleNav } from '@/contexts/TitleNavContext';
 
 const HomepageMainTitles = () => {
   const [isSticky, setIsSticky] = useState(false);
   const headerRef = useRef<HTMLDivElement | null>(null);
+  const { setTitleInNav } = useTitleNav();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -11,8 +13,10 @@ const HomepageMainTitles = () => {
         // Check if we've scrolled past the header's top offset
         if (window.scrollY > headerRef.current.offsetTop + 105) {
           setIsSticky(true);
+          setTitleInNav(true);
         } else {
           setIsSticky(false);
+          setTitleInNav(false);
         }
       }
     };
@@ -20,14 +24,16 @@ const HomepageMainTitles = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [setTitleInNav]);
   return (
     <div
       ref={headerRef}
-      className={`main__titles z-20 mt-[15rem] w-fit px-[5%] small:px-layout-small ${isSticky && 'titles__sticky'}`}
+      className={`main__titles mt-[15rem] w-fit px-[5%] small:px-layout-small ${isSticky && 'titles__sticky'}`}
     >
       <h1 className="page__title">
-        <span className="name__title block pb-4 font-font_anonymous text-[clamp(2.5rem,1.9vw,3.6rem)]">
+        <span
+          className={`name__title block pb-4 font-font_anonymous text-[clamp(2.5rem,1.9vw,3.6rem)] ${isSticky ? 'opacity-0' : 'opacity-100'}`}
+        >
           Stuart Bloxham.{' '}
         </span>
 

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Italiana, Anonymous_Pro, Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
+import { TitleNavProvider } from '@/contexts/TitleNavContext';
 
 const italiana = Italiana({
   variable: '--font-italiana',
@@ -34,34 +35,36 @@ export default function RootLayout({
       <body
         className={`${italiana.variable} ${anonymousPro.variable} ${inter.variable} relative antialiased`}
       >
-        <Navbar />
-        <div className="pattern__bg fixed right-0 top-[101px] -z-10 h-[700px] w-[400px]">
-          <div className="pattern__overlay"></div>
-          <svg width="100%" height="100%">
-            <pattern
-              id="pattern-circles"
-              x="0"
-              y="0"
-              width="20"
-              height="20"
-              patternUnits="userSpaceOnUse"
-              patternContentUnits="userSpaceOnUse"
-            >
-              <circle id="pattern-circle" cx="5" cy="5" r="5" fill="#5eead4" />
-            </pattern>
+        <TitleNavProvider>
+          <Navbar />
+          <div className="pattern__bg fixed right-0 top-[101px] -z-10 h-[700px] w-[400px]">
+            <div className="pattern__overlay"></div>
+            <svg width="100%" height="100%">
+              <pattern
+                id="pattern-circles"
+                x="0"
+                y="0"
+                width="20"
+                height="20"
+                patternUnits="userSpaceOnUse"
+                patternContentUnits="userSpaceOnUse"
+              >
+                <circle id="pattern-circle" cx="5" cy="5" r="5" fill="#5eead4" />
+              </pattern>
 
-            <rect
-              id="rect"
-              x="0"
-              y="0"
-              width="100%"
-              height="100%"
-              fill="url(#pattern-circles)"
-              opacity="0.04"
-            />
-          </svg>
-        </div>
-        {children}
+              <rect
+                id="rect"
+                x="0"
+                y="0"
+                width="100%"
+                height="100%"
+                fill="url(#pattern-circles)"
+                opacity="0.04"
+              />
+            </svg>
+          </div>
+          {children}
+        </TitleNavProvider>
       </body>
     </html>
   );

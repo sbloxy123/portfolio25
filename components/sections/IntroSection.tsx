@@ -45,7 +45,7 @@ const IntroSection = () => {
     >
       <div
         ref={headerRef}
-        className={`bio__cta max-w-[38rem] small:w-[35%] ${isSticky && 'bio__sticky'}`}
+        className={`bio__cta max-w-[38rem] small:w-[clamp(330px,31%,38rem)] ${isSticky && 'bio__sticky'}`}
       >
         <p className="title__sub-text">...with a genuine passion for all things Web Development!</p>
 
