@@ -3,6 +3,7 @@ import { Italiana, Anonymous_Pro, Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import { TitleNavProvider } from '@/contexts/TitleNavContext';
+import Footer from '@/components/Footer';
 
 const italiana = Italiana({
   variable: '--font-italiana',
@@ -65,6 +66,7 @@ export default function RootLayout({
           </div>
           {children}
         </TitleNavProvider>
+        <Footer />
       </body>
     </html>
   );

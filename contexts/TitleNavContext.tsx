@@ -10,6 +10,7 @@ const TitleNavContext = createContext<TitleNavContextType | undefined>(undefined
 
 export const TitleNavProvider = ({ children }: { children: ReactNode }) => {
   const [isTitleInNav, setTitleInNav] = useState(false);
+
   return (
     <TitleNavContext.Provider value={{ isTitleInNav, setTitleInNav }}>
       {children}

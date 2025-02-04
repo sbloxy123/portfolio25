@@ -10,7 +10,6 @@ const HomepageMainTitles = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (headerRef.current) {
-        // Check if we've scrolled past the header's top offset
         if (window.scrollY > headerRef.current.offsetTop + 105) {
           setIsSticky(true);
           setTitleInNav(true);

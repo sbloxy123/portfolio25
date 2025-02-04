@@ -70,6 +70,9 @@ h6 {
 p {
   font-size: clamp(1.4rem, 2vw, 1.6rem);
 }
+a {
+  font-size: clamp(1.4rem, 2vw, 1.6rem);
+}
 
 ul {
   li {
@@ -138,7 +141,7 @@ ul {
       z-index: 100; */
     }
     .fed__title {
-      padding-top: 8rem;
+      padding-top: 5rem;
       font-size: clamp(6rem, 5.8cqw, 7rem);
     }
   }

@@ -1,11 +1,9 @@
 import Image from 'next/image';
-import { ProjectType } from './sections/ProjectsSection';
 import Badges from './Badges';
 import ButtonLink from './ButtonLink';
+import { ProjectType } from '@/app/data/projects-data';
 
 const ProjectItem = ({ project }: { project: ProjectType }) => {
-  console.log(project.tech);
-
   return (
     <div className="">
       <div className="project__item__container group relative mx-auto aspect-[330/467] h-auto w-[330px] max-w-[330px] cursor-pointer overflow-hidden small:mx-0">
@@ -47,7 +45,7 @@ const ProjectItem = ({ project }: { project: ProjectType }) => {
                   buttonType="secondary"
                   text="Read More"
                   ariaLabel={`Read more about ${project.title}`}
-                  hrefDestination={project.innerPageLink}
+                  hrefDestination={`projects/${project.innerPageLink}`}
                 />
               )}
             </div>

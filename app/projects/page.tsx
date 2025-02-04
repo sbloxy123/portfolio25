@@ -2,10 +2,11 @@
 
 import { useEffect, useState, useRef } from 'react';
 import ProjectItem from '@/components/ProjectItem';
-import { projects } from '@/components/sections/ProjectsSection';
+
 import Stack from '@/components/sections/Stack';
 import Link from 'next/link';
 import { useTitleNav } from '@/contexts/TitleNavContext';
+import { projects } from '../data/projects-data';
 
 export default function Projects() {
   const [isSticky, setIsSticky] = useState(false);

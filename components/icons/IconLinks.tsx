@@ -4,10 +4,12 @@ import DocumentIcon from './DocumentIcon';
 import GithubIcon from './GithubIcon';
 import LinkedInIcon from './LinkedInIcon';
 
-interface Icon {
+export interface Icon {
   title: string;
   url: string;
   component: React.FC<React.SVGProps<SVGSVGElement>>;
+  opensIn?: '_blank';
+  ariaLabel?: string;
 }
 
 const svgIcons: Icon[] = [

@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import StackSwiper from '../swiper/StackSwiper';
 
@@ -83,6 +84,7 @@ const stack: stackItemType[] = [
     title: 'Tailwind CSS',
     image: '/stack-icons/tailwind.png',
   },
+
   {
     title: 'Swiper Js',
     image: '/stack-icons/swiper.png',
@@ -100,7 +102,7 @@ const stack: stackItemType[] = [
 const Stack = () => {
   return (
     <section
-      className="stack__section relative bg-white px-[5%] py-20 small:px-layout-small"
+      className="stack__section relative z-10 bg-white px-[5%] py-20 small:px-layout-small"
       id="stack"
     >
       <div className="absolute inset-0 bg-[rgba(var(--background-opac),0.2)] mix-blend-color"></div>

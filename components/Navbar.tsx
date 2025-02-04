@@ -15,14 +15,15 @@ const Navbar = () => {
   const closeMenu = () => {
     setToggleMenu(false);
   };
+
   return (
     <header
-      className={`header fixed left-0 right-0 top-0 z-20 mx-auto flex min-h-[103px] w-full items-center justify-between border-b-2 border-[rgba(var(--green-opac),0.5)] px-[5%] py-[3rem] backdrop-blur-sm xsmall:py-[3rem] small:px-layout-small ${toggleMenu ? 'bg-transparent' : 'bg-[rgba(var(--background),0.3)]'} `}
+      className={`header fixed left-0 right-0 top-0 z-20 mx-auto flex min-h-[70px] w-full items-center justify-between border-b-2 border-[rgba(var(--green-opac),0.5)] px-[5%] py-[2rem] backdrop-blur-sm xsmall:min-h-[103px] xsmall:py-[3rem] small:px-layout-small ${toggleMenu ? 'bg-transparent' : 'bg-[rgba(var(--background-opac),0.5)]'} `}
     >
       <Link
         href="/"
         aria-label="Link to homepage"
-        className={`name__title relative font-font_anonymous text-[clamp(2.5rem,1.9vw,3.6rem)] transition-opacity duration-300 ${isTitleInNav ? 'opacity-100' : pathname == '/' ? 'opacity-0' : 'opacity-100'}`}
+        className={`name__title relative font-font_anonymous text-[clamp(2.5rem,1.9vw,3.6rem)] transition-all duration-300 hover:text-theme_green ${isTitleInNav ? 'opacity-100' : pathname == '/' ? 'opacity-0' : 'opacity-100'}`}
       >
         Stuart Bloxham
         <span className="">
@@ -47,7 +48,7 @@ const Navbar = () => {
       </div>
 
       <button
-        className={`menu__btn fixed right-[5%] top-10 z-20 ml-auto w-fit cursor-pointer font-font_anonymous text-[3rem] uppercase transition-colors duration-300 hover:text-theme_green ${toggleMenu ? 'active top-12 small:right-0 small:mr-[clamp(7rem,7vw,12rem)]' : ''}`}
+        className={`menu__btn fixed right-[5%] top-10 z-20 ml-auto min-h-[3rem] w-fit cursor-pointer font-font_anonymous text-[3rem] uppercase leading-none transition-colors duration-300 hover:text-theme_green xsmall:min-h-[5rem] ${toggleMenu ? 'active top-12 small:right-0 small:mr-[clamp(7rem,7vw,12rem)]' : ''}`}
         onClick={() => setToggleMenu(!toggleMenu)}
       >
         <div className="menu__lines">
@@ -55,7 +56,7 @@ const Navbar = () => {
           <span></span>
           <span></span>
         </div>
-        menu
+        <span className="w-0 opacity-0 xsmall:w-fit xsmall:opacity-100">menu</span>
       </button>
 
       <div className="menu__container inset-0 z-10">
@@ -69,7 +70,7 @@ const Navbar = () => {
           className={`menu fixed right-0 top-0 z-10 w-[70vw] min-w-[340px] max-w-[700px] items-end justify-end transition-all delay-200 duration-300 before:absolute before:inset-0 before:-z-10 before:bg-foreground before:opacity-10 before:backdrop-blur-3xl before:content-[""] small:-right-[clamp(7rem,7vw,12rem)] ${toggleMenu ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}
         >
           <div
-            className={`menu__icon__links absolute bottom-auto left-[5%] right-auto top-12 z-20 m-auto ml-auto h-fit w-[50vw] max-w-[700px] translate-y-2 transition-opacity duration-1000 ${toggleMenu ? 'opacity-100' : 'opacity-0'}`}
+            className={`menu__icon__links absolute bottom-auto left-[5%] right-auto top-8 z-20 m-auto ml-auto h-fit w-[50vw] max-w-[700px] translate-y-2 transition-opacity duration-1000 xsmall:top-12 ${toggleMenu ? 'opacity-100' : 'opacity-0'}`}
           >
             <IconLinks menuIsOpen={toggleMenu} />
           </div>

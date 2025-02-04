@@ -1,45 +1,5 @@
+import { projects } from '@/app/data/projects-data';
 import ProjectSwiper from '../swiper/ProjectSwiper';
-
-export type ProjectType = {
-  title: string;
-  image: string;
-  //   altText: string;
-  ariaLabel?: string;
-  features: string[];
-  tech: string[];
-  websiteLink: string;
-  innerPageLink?: string;
-};
-
-export const projects: ProjectType[] = [
-  {
-    title: 'Churchill Academy & Sixth Form',
-    image: '/projects/churchill.png',
-    // altText: "Screenshot of Churchill Academy & Sixth Form's website",
-    features: [
-      'Fully Responsive',
-      'Spinning animation using javascript to find user scroll position',
-      'Strong use CSS Clip-path throughout',
-    ],
-    tech: ['CSS', 'ASP.NET', 'JavaScript'],
-    websiteLink: 'https://www.churchill-academy.org',
-    innerPageLink: '/',
-  },
-  {
-    title: 'Guru Nanak Sich Academy',
-    image: '/projects/gurununak.png',
-    // altText: "Visit Churchill Academy & Sixth Form's website",
-    features: [
-      'Fully Responsive',
-      'Attention to detail',
-      'Smooth transitions and animations',
-      'Multi-page admin control and functionality',
-    ],
-    tech: ['CSS', 'ASP.NET', 'JavaScript'],
-    websiteLink: 'https://www.gurunanaksikhacademy.co.uk/',
-    innerPageLink: '/',
-  },
-];
 
 const ProjectsSection = () => {
   return (

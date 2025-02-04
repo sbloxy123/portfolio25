@@ -12,7 +12,7 @@ import { Navigation, Mousewheel, FreeMode } from 'swiper/modules';
 const ProjectSwiper = ({ projects }: { projects: ProjectType[] }) => {
   return (
     <Swiper
-      spaceBetween={50}
+      spaceBetween={20}
       slidesPerView="auto"
       className="project__swiper"
       wrapperTag="ul"
