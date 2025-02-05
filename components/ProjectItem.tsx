@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import Badges from './Badges';
 import ButtonLink from './ButtonLink';
@@ -5,7 +7,7 @@ import { ProjectType } from '@/app/data/projects-data';
 
 function getCloudinaryUrl(publicId: string) {
   const cloudName = process.env.CLOUDINARY_CLOUD_NAME;
-  return `https://res.cloudinary.com/${cloudName}/image/upload/v1/my-nextjs-site/${publicId}.png`;
+  return `https://res.cloudinary.com/${cloudName}/image/upload/v1738793688/my-site/projects/${publicId}.png`;
 }
 
 const ProjectItem = ({ project }: { project: ProjectType }) => {

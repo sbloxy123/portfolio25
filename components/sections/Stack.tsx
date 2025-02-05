@@ -1,6 +1,12 @@
 'use client';
+
 import Image from 'next/image';
 import StackSwiper from '../swiper/StackSwiper';
+
+function getCloudinaryUrl(publicId: string) {
+  const cloudName = process.env.CLOUDINARY_CLOUD_NAME;
+  return `https://res.cloudinary.com/${cloudName}/image/upload/v1738792574/my-site/stack-icons/${publicId}`;
+}
 
 export type stackItemType = {
   title: string;
@@ -10,92 +16,92 @@ export type stackItemType = {
 const stack: stackItemType[] = [
   {
     title: 'Bootstrap',
-    image: '/stack-icons/bootstrap.png',
+    image: 'bootstrap.png',
   },
   {
     title: 'Cloudinary',
-    image: '/stack-icons/cloudinary.png',
+    image: 'cloudinary.png',
   },
   {
     title: 'CSS',
-    image: '/stack-icons/css3.png',
+    image: 'css3.png',
   },
   {
     title: 'Figma',
-    image: '/stack-icons/figma.svg',
+    image: 'figma.svg',
   },
   {
     title: 'Gatsby',
-    image: '/stack-icons/gatsbyjs.svg',
+    image: 'gatsbyjs.svg',
   },
   {
     title: 'Git',
-    image: '/stack-icons/github.png',
+    image: 'github.png',
   },
   {
     title: 'Heroku',
-    image: '/stack-icons/heroku.png',
+    image: 'heroku.png',
   },
   {
     title: 'HTML5',
-    image: '/stack-icons/HTML5.png',
+    image: 'HTML5.png',
   },
   {
     title: 'Javascript',
-    image: '/stack-icons/Javascript.png',
+    image: 'Javascript.png',
   },
   {
     title: 'Mapbox',
-    image: '/stack-icons/mapbox.png',
+    image: 'mapbox.png',
   },
   {
     title: 'Netlify',
-    image: '/stack-icons/netlify.svg',
+    image: 'netlify.svg',
   },
   {
     title: 'Next Js',
-    image: '/stack-icons/next-js.png',
+    image: 'next-js.png',
   },
   {
     title: 'Postgres',
-    image: '/stack-icons/postgresql.png',
+    image: 'postgresql.png',
   },
   {
     title: 'React',
-    image: '/stack-icons/React.png',
+    image: 'React.png',
   },
   {
     title: 'Ruby on Rails',
-    image: '/stack-icons/Ror.png',
+    image: 'Ror.png',
   },
   {
     title: 'Stimulus',
-    image: '/stack-icons/Stimulus.png',
+    image: 'Stimulus.png',
   },
   {
     title: 'Strapi CMS',
-    image: '/stack-icons/Strapi.png',
+    image: 'Strapi.png',
   },
   {
     title: 'Styled Components',
-    image: '/stack-icons/styled-components.png',
+    image: 'styled-components.png',
   },
   {
     title: 'Tailwind CSS',
-    image: '/stack-icons/tailwind.png',
+    image: 'tailwind.png',
   },
 
   {
     title: 'Swiper Js',
-    image: '/stack-icons/swiper.png',
+    image: 'swiper.png',
   },
   {
     title: 'SCSS',
-    image: '/stack-icons/SCSS.png',
+    image: 'SCSS.png',
   },
   {
     title: 'Adobe XD',
-    image: '/stack-icons/adobeXD.png',
+    image: 'adobeXD.png',
   },
 ];
 
@@ -110,6 +116,8 @@ const Stack = () => {
 
       <ul className="relative hidden flex-wrap items-start justify-between gap-[1.9rem] py-10 xsmall:flex">
         {stack.map((stackItem, index) => {
+          const publicId = getCloudinaryUrl(stackItem.image);
+
           return (
             <li
               key={index}
@@ -118,7 +126,7 @@ const Stack = () => {
               <Image
                 width={100}
                 height={100}
-                src={stackItem.image}
+                src={publicId}
                 alt={`${stackItem.title} logo`}
                 className="h-full w-full object-contain"
               />
