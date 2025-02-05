@@ -3,15 +3,14 @@ import { projects, ProjectType } from '../../data/projects-data';
 import Link from 'next/link';
 import Image from 'next/image';
 
-// type PageProps = {
-//   params: {
-//     slug: string;
-//   };
-// };
-type Awaitable<T> = T | Promise<T>;
+type PageProps = {
+  params: {
+    slug: string;
+  };
+};
 
-export default async function Page({ params }: { params: Awaitable<{ slug: string }> }) {
-  const { slug } = await Promise.resolve(params);
+export default async function Page({ params }: PageProps) {
+  const { slug } = params;
 
   const project: ProjectType | undefined = projects.find((proj) => proj.innerPageLink === slug);
 
