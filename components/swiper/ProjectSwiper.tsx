@@ -5,9 +5,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 import ProjectItem from '../ProjectItem';
-import { ProjectType } from '../sections/ProjectsSection';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Mousewheel, FreeMode } from 'swiper/modules';
+import { ProjectType } from '@/app/data/projects-data';
 
 const ProjectSwiper = ({ projects }: { projects: ProjectType[] }) => {
   return (
