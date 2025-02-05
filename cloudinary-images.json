@@ -1,1 +1,7 @@
-{}
+{
+  "churchill.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738791607/my-nextjs-site/churchill.png",
+  "gurununak.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738791615/my-nextjs-site/gurununak.png",
+  "rosco.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738791617/my-nextjs-site/rosco.png",
+  "swr.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738791619/my-nextjs-site/swr.png",
+  "symathshub.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738791620/my-nextjs-site/symathshub.png"
+}

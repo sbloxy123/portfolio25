@@ -1,9 +1,10 @@
-// upload-images.js
+import 'dotenv/config';
+
 import fs from 'fs';
 import path from 'path';
 import cloudinary from './lib/cloudinary.js'; // or require('./lib/cloudinary')
 
-const imagesDir = path.join(process.cwd(), 'public');
+const imagesDir = path.join(process.cwd(), 'public/projects');
 const outputFile = path.join(process.cwd(), 'cloudinary-images.json');
 
 async function uploadImages() {

@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "cloudinary": "^2.5.1",
+    "dotenv": "^16.4.7",
     "motion": "^11.18.1",
     "next": "15.1.4",
     "next-cloudinary": "^6.16.0",
