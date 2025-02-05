@@ -8,8 +8,9 @@ import Image from 'next/image';
 //     slug: string;
 //   };
 // };
+type Awaitable<T> = T | Promise<T>;
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function Page({ params }: { params: Awaitable<{ slug: string }> }) {
   const { slug } = await Promise.resolve(params);
 
   const project: ProjectType | undefined = projects.find((proj) => proj.innerPageLink === slug);
