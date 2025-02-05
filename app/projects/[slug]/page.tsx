@@ -4,17 +4,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export async function generateStaticParams() {
-  return projects.map((proj) => ({
-    slug: proj.innerPageLink,
-  }));
+  return projects.map((p) => ({ slug: p.innerPageLink }));
 }
 
-export default function Page({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+export default async function Page({ params }) {
+  const { slug } = await params;
 
-  // Now you can directly access slug with no "await" needed!
-  const project: ProjectType | undefined = projects.find((proj) => proj.innerPageLink === slug);
-
+  const project = projects.find((p) => p.innerPageLink === slug);
   if (!project) {
     return notFound();
   }
