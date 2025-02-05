@@ -55,11 +55,13 @@ export default function Projects() {
           <h2 className="section__title text-center xsmall:w-full">Projects.</h2>
 
           <ul className="projects__list flex flex-wrap justify-center gap-10 pt-10">
-            {projects.map((project, index) => (
-              <li key={index} className="">
-                <ProjectItem project={project} />
-              </li>
-            ))}
+            {projects.map((project, index) => {
+              return (
+                <li key={index} className="">
+                  <ProjectItem project={project} />
+                </li>
+              );
+            })}
           </ul>
         </section>
 

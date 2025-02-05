@@ -11,11 +11,11 @@ import { Navigation, Mousewheel, FreeMode, Grid } from 'swiper/modules';
 import { stackItemType } from '../sections/Stack';
 import Image from 'next/image';
 
-function getCloudinaryUrl(publicId: string) {
-  const cloudName = process.env.CLOUDINARY_CLOUD_NAME;
-  return `https://res.cloudinary.com/${cloudName}/image/upload/v1738792574/my-site/stack-icons/${publicId}`;
-}
 const StackSwiper = ({ stack }: { stack: stackItemType[] }) => {
+  function getCloudinaryUrl(publicId: string) {
+    const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
+    return `https://res.cloudinary.com/${cloudName}/image/upload/v1738792574/my-site/stack-icons/${publicId}`;
+  }
   return (
     <Swiper
       spaceBetween={20}

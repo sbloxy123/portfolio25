@@ -1,12 +1,11 @@
 'use client';
-
 import Image from 'next/image';
-import StackSwiper from '../swiper/StackSwiper';
+// import StackSwiper from '../swiper/StackSwiper';
+import dynamic from 'next/dynamic';
 
-function getCloudinaryUrl(publicId: string) {
-  const cloudName = process.env.CLOUDINARY_CLOUD_NAME;
-  return `https://res.cloudinary.com/${cloudName}/image/upload/v1738792574/my-site/stack-icons/${publicId}`;
-}
+const DynamicStackSwiper = dynamic(() => import('../swiper/StackSwiper'), {
+  ssr: false,
+});
 
 export type stackItemType = {
   title: string;
@@ -106,6 +105,11 @@ const stack: stackItemType[] = [
 ];
 
 const Stack = () => {
+  function getCloudinaryUrl(publicId: string) {
+    const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
+    return `https://res.cloudinary.com/${cloudName}/image/upload/v1738792574/my-site/stack-icons/${publicId}`;
+  }
+
   return (
     <section
       className="stack__section relative z-10 bg-white px-[5%] py-20 small:px-layout-small"
@@ -136,7 +140,7 @@ const Stack = () => {
       </ul>
 
       <div className="py-10 xsmall:hidden">
-        <StackSwiper stack={stack} />
+        <DynamicStackSwiper stack={stack} />
       </div>
     </section>
   );
