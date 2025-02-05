@@ -6,8 +6,11 @@ import Image from 'next/image';
 export async function generateStaticParams() {
   return projects.map((p) => ({ slug: p.innerPageLink }));
 }
+interface PageProps {
+  params: Promise<{ slug: string }>;
+}
 
-export default async function Page({ params }) {
+export default async function Page({ params }: PageProps) {
   const { slug } = await params;
 
   const project = projects.find((p) => p.innerPageLink === slug);
