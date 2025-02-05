@@ -10,7 +10,7 @@ type PageProps = {
 };
 
 export default async function Page({ params }: PageProps) {
-  const { slug } = await params; // Await params before using its properties
+  const { slug } = await Promise.resolve(params);
 
   const project: ProjectType | undefined = projects.find((proj) => proj.innerPageLink === slug);
 
