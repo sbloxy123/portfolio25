@@ -3,15 +3,16 @@ import { projects, ProjectType } from '../../data/projects-data';
 import Link from 'next/link';
 import Image from 'next/image';
 
-type PageProps = {
-  params: {
-    slug: string;
-  };
-};
+export async function generateStaticParams() {
+  return projects.map((proj) => ({
+    slug: proj.innerPageLink,
+  }));
+}
 
-export default async function Page({ params }: PageProps) {
+export default function Page({ params }: { params: { slug: string } }) {
   const { slug } = params;
 
+  // Now you can directly access slug with no "await" needed!
   const project: ProjectType | undefined = projects.find((proj) => proj.innerPageLink === slug);
 
   if (!project) {
