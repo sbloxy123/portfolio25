@@ -16,7 +16,8 @@ export type ProjectType = {
 export const projects: ProjectType[] = [
   {
     title: 'Rosco & Perlini',
-    image: '/projects/rosco.png',
+    // image: '/projects/rosco.png',
+    image: 'rosco',
     features: [
       'Fully Responsive',
       'Pixel-perfect to professional design',
@@ -45,7 +46,8 @@ export const projects: ProjectType[] = [
   },
   {
     title: 'Churchill Academy & Sixth Form',
-    image: '/projects/churchill.png',
+    // image: '/projects/churchill.png',
+    image: 'churchill',
     // altText: "Screenshot of Churchill Academy & Sixth Form's website",
     features: [
       'Fully Responsive',
@@ -58,7 +60,8 @@ export const projects: ProjectType[] = [
   },
   {
     title: 'Guru Nanak Sich Academy',
-    image: '/projects/gurununak.png',
+    // image: '/projects/gurununak.png',
+    image: 'gurununak',
     // altText: "Visit Churchill Academy & Sixth Form's website",
     features: [
       'Fully Responsive',

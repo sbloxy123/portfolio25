@@ -3,14 +3,20 @@ import Badges from './Badges';
 import ButtonLink from './ButtonLink';
 import { ProjectType } from '@/app/data/projects-data';
 
+function getCloudinaryUrl(publicId: string) {
+  const cloudName = process.env.CLOUDINARY_CLOUD_NAME;
+  return `https://res.cloudinary.com/${cloudName}/image/upload/v1/my-nextjs-site/${publicId}.png`;
+}
+
 const ProjectItem = ({ project }: { project: ProjectType }) => {
+  const publicId = getCloudinaryUrl(project.image);
   return (
     <div className="">
       <div className="project__item__container group relative mx-auto aspect-[330/467] h-auto w-[330px] max-w-[330px] cursor-pointer overflow-hidden small:mx-0">
         <div className="project__image relative h-full w-full">
           <Image
             className="absolute left-0 top-0 w-full object-contain transition-all duration-[1000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:top-[100%] group-hover:translate-y-[-100%]"
-            src={project.image}
+            src={publicId}
             width={2960}
             height={9724}
             alt={`Screenshot of ${project.title}'s website`}
