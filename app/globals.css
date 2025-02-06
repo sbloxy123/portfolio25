@@ -214,7 +214,9 @@ ul {
 .section__title {
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  padding-top: 1em;
+  text-align: center;
 }
 
 .reset__btn {
@@ -312,4 +314,26 @@ ul {
   .stack__swiper {
     overflow: visible;
   }
+}
+
+#scrollButton {
+  transition: 500ms;
+  opacity: 0.6;
+  a {
+    span {
+      transition: 300ms;
+    }
+  }
+  &:hover {
+    opacity: 1;
+    a {
+      span {
+        transform: translateY(-10%);
+      }
+    }
+  }
+}
+
+#scrollButton.scroll__button__hidden {
+  opacity: 0;
 }

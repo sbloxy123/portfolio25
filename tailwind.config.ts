@@ -40,6 +40,10 @@ export default {
         'section-gap-small': '80px',
         'layout-small': 'var(--layout-margin-small)',
       },
+      animation: {
+        'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'pulse-slow': 'pulse 4.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
     },
   },
   plugins: [],

@@ -3,11 +3,11 @@ import Link from 'next/link';
 
 const menuItems = [
   { href: '/', title: 'Home' },
-  { href: '#about__me', title: 'About Me' },
-  { href: '#experience', title: 'experience' },
+  { href: '/#about__me', title: 'About Me' },
+  { href: '/#experience', title: 'experience' },
   { href: '/projects', title: 'Projects' },
-  { href: '#stack', title: 'Stack' },
-  { href: '#contact', title: 'Contact' },
+  { href: '/#stack', title: 'Stack' },
+  { href: '/#contact', title: 'Contact' },
 ];
 
 const menuContainer = {

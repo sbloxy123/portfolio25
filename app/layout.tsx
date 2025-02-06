@@ -4,6 +4,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import { TitleNavProvider } from '@/contexts/TitleNavContext';
 import Footer from '@/components/Footer';
+import { ScrollArrow } from '@/components/ScrollArrow';
 
 const italiana = Italiana({
   variable: '--font-italiana',
@@ -38,6 +39,8 @@ export default function RootLayout({
       >
         <TitleNavProvider>
           <Navbar />
+          <ScrollArrow />
+
           <div className="pattern__bg fixed right-0 top-[101px] -z-10 h-[700px] w-[400px]">
             <div className="pattern__overlay"></div>
             <svg width="100%" height="100%">

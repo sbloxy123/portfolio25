@@ -17,6 +17,12 @@ export default async function Page({ params }: PageProps) {
   if (!project) {
     return notFound();
   }
+  function getCloudinaryUrl(publicId: string) {
+    const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
+    return `https://res.cloudinary.com/${cloudName}/image/upload/v1738793688/my-site/projects/${publicId}.png`;
+  }
+  const publicId = getCloudinaryUrl(project.image);
+
   const shortenedUrl = project.websiteLink.split('www.')[1];
 
   return (
@@ -72,7 +78,7 @@ export default async function Page({ params }: PageProps) {
           </ul>
         </article>
       </div>
-      <div className="project__intro__screenshot relative mt-[120px] small:max-w-[30%]">
+      <div className="project__intro__screenshot relative mt-[120px] small:max-w-[40%]">
         <div className="project__intro__screenshot__container__overlay absolute bottom-0 left-0 right-0 z-10 h-[30%] w-full bg-gradient-to-t from-background to-transparent"></div>
         <Link
           href={project.websiteLink}
@@ -99,9 +105,8 @@ export default async function Page({ params }: PageProps) {
         </Link>
         <div className="project__intro__screenshot__container relative max-h-[75vh] min-w-[330px] overflow-scroll">
           <Image
-            //   className="absolute left-0 top-0 w-full object-contain transition-all duration-[1000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:top-[100%] group-hover:translate-y-[-100%]"
             className="top-0 h-auto w-full"
-            src={project.image}
+            src={publicId}
             width={2960}
             height={9724}
             alt={`Screenshot of ${project.title}'s website`}

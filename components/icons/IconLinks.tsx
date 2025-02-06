@@ -15,7 +15,7 @@ export interface Icon {
 const svgIcons: Icon[] = [
   {
     title: 'CV',
-    url: '/Stuart_Bloxham_CV.pdf', //to be updated
+    url: 'Stuart-Bloxham-CV-web-developer.pdf', //to be updated
     component: DocumentIcon,
   },
   {
@@ -69,6 +69,7 @@ const IconLinks = ({
         return (
           <motion.a
             variants={iconItem}
+            // download={icon.title === 'CV' ? true : undefined}
             href={`${icon.url}`}
             target="_blank"
             title={`${icon.title == 'CV' ? 'Download' : 'Link to'} my ${icon.title}`}

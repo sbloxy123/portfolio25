@@ -12,6 +12,10 @@ const Navbar = () => {
   const { isTitleInNav } = useTitleNav();
   const pathname = usePathname();
 
+  const breadcrumb = pathname.split('/');
+
+  console.log(breadcrumb.length);
+
   const closeMenu = () => {
     setToggleMenu(false);
   };
@@ -20,25 +24,47 @@ const Navbar = () => {
     <header
       className={`header fixed left-0 right-0 top-0 z-20 mx-auto flex min-h-[70px] w-full items-center justify-between border-b-2 border-[rgba(var(--green-opac),0.5)] px-[5%] py-[2rem] backdrop-blur-sm xsmall:min-h-[103px] xsmall:py-[3rem] small:px-layout-small ${toggleMenu ? 'bg-transparent' : 'bg-[rgba(var(--background-opac),0.5)]'} `}
     >
-      <Link
-        href="/"
-        aria-label="Link to homepage"
-        className={`name__title relative font-font_anonymous text-[clamp(2.5rem,1.9vw,3.6rem)] transition-all duration-300 hover:text-theme_green ${isTitleInNav ? 'opacity-100' : pathname == '/' ? 'opacity-0' : 'opacity-100'}`}
-      >
-        Stuart Bloxham
-        <span className="">
+      <div className="relative">
+        <Link
+          href="/"
+          aria-label="Link to homepage"
+          className={`name__title font-font_anonymous text-[clamp(2.5rem,1.9vw,3.6rem)] transition-all duration-300 hover:text-theme_green ${isTitleInNav ? 'opacity-100' : pathname == '/' ? 'opacity-0' : 'opacity-100'}`}
+        >
+          Stuart Bloxham
+          <span className="small:hidden">.</span>
+        </Link>
+
+        <div className="breadcrumbs absolute bottom-0 left-0 m-auto hidden h-fit translate-y-[95%] whitespace-nowrap font-font_anonymous text-[0.5em] font-normal uppercase leading-none tracking-[0.2em] text-theme_green small:inline">
           {pathname === '/' ? (
-            '.'
+            ''
           ) : (
-            <>
-              <span className="pointer-events-none absolute bottom-0 left-full top-0 m-auto hidden h-fit translate-y-1 pl-4 text-[0.5em] font-semibold uppercase leading-none tracking-[0.1em] text-theme_green opacity-50 small:inline">
-                {pathname}
-              </span>
-              <span className="small:hidden">.</span>
-            </>
+            <span>
+              {breadcrumb.length > 2 ? (
+                <>
+                  <Link
+                    href="/projects"
+                    className="text-[clamp(1.4rem,2vw,1.6rem)] underline decoration-transparent decoration-1 underline-offset-4 opacity-80 transition-colors duration-300 hover:decoration-theme_green"
+                    aria-label="back to projects page"
+                  >
+                    {breadcrumb[1]}
+                  </Link>
+                  <span className="text-[clamp(1.4rem,2vw,1.6rem)] opacity-50">
+                    <span className="mx-1"> / </span> <span>{breadcrumb[2]}</span>
+                  </span>
+                </>
+              ) : (
+                <p
+                  className="text-[clamp(1.4rem,2vw,1.6rem)] opacity-80"
+                  aria-label="back to projects page"
+                >
+                  {breadcrumb[1]}
+                </p>
+              )}
+            </span>
           )}
-        </span>
-      </Link>
+        </div>
+      </div>
+
       <div
         className={`icon__links tablet:block absolute bottom-0 left-[5%] right-0 top-0 z-20 m-auto ml-0 hidden h-fit w-fit transition-opacity duration-500 xsmall:left-0 xsmall:ml-auto ${
           toggleMenu ? 'pointer-events-none opacity-0' : 'opacity-100 delay-300'

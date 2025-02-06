@@ -112,7 +112,7 @@ const Stack = () => {
 
   return (
     <section
-      className="stack__section relative z-10 bg-white px-[5%] py-20 small:px-layout-small"
+      className="stack__section relative z-10 border-[3px] border-b-theme_green border-t-theme_green bg-white px-[5%] py-20 small:px-layout-small"
       id="stack"
     >
       <div className="absolute inset-0 bg-[rgba(var(--background-opac),0.2)] mix-blend-color"></div>
