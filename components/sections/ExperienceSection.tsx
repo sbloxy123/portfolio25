@@ -60,7 +60,7 @@ const experienceList: ExperienceJobType[] = [
 const ExperienceSection = () => {
   return (
     <section
-      className="experience__section mt-20 px-[5%] small:ml-auto small:w-[60%] small:pl-0 small:pr-layout-small medium:w-1/2"
+      className="experience__section mt-20 max-w-[850px] px-[5%] small:ml-auto small:w-[60%] small:pl-0 small:pr-layout-small medium:w-1/2"
       id="experience"
     >
       <h2 className="section__title">Experience.</h2>

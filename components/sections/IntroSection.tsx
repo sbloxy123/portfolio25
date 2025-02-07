@@ -65,10 +65,10 @@ const IntroSection = () => {
         <IconLinks animate={false} />
       </div>
 
-      <div className="bio__text ml-auto pt-20 small:w-[62%] small:pt-0 medium:w-1/2">
+      <div className="bio__text max-w-[700px] pt-20 small:ml-auto small:w-[62%] small:pt-0 medium:w-1/2">
         <h2 className="section__title">About.</h2>
 
-        <p className="text-[clamp(0.8em,4.7cqw,1.1em)]">
+        <p className="text-[clamp(0.8em,2.3cqw,1.1em)]">
           Proud to call myself a Front End Developer after a challenging journey of making a career
           change from client facing roles into tech. I have a genuine passion for web development -
           working full-time within the websites department of a large Ed-Tech company, building a

@@ -78,7 +78,7 @@ export default async function Page({ params }: PageProps) {
           </ul>
         </article>
       </div>
-      <div className="project__intro__screenshot relative mt-[120px] small:max-w-[40%]">
+      <div className="project__intro__screenshot relative mx-auto mt-[120px] max-w-[70%] small:max-w-[40%]">
         <div className="project__intro__screenshot__container__overlay absolute bottom-0 left-0 right-0 z-10 h-[30%] w-full bg-gradient-to-t from-background to-transparent"></div>
         <Link
           href={project.websiteLink}

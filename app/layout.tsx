@@ -64,6 +64,8 @@ export default function RootLayout({
                 height="100%"
                 fill="url(#pattern-circles)"
                 opacity="0.04"
+                className="animate-pulse-half"
+                // also see animate-pulse-half in tailwind config
               />
             </svg>
           </div>

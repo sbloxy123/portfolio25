@@ -40,9 +40,16 @@ export default {
         'section-gap-small': '80px',
         'layout-small': 'var(--layout-margin-small)',
       },
+      keyframes: {
+        'pulse-half': {
+          '0%, 100%': { opacity: '0.1' },
+          '50%': { opacity: '0.04' },
+        },
+      },
       animation: {
         'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'pulse-slow': 'pulse 4.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'pulse-half': 'pulse-half 10s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
     },
   },
