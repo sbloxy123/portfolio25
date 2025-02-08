@@ -13,7 +13,7 @@ const ProjectItem = ({ project }: { project: ProjectType }) => {
 
   return (
     <div className="">
-      <div className="project__item__container group relative mx-auto aspect-[330/467] h-auto min-w-[320px] cursor-pointer overflow-hidden small:mx-0">
+      <div className="project__item__container group relative mx-auto aspect-[330/527] h-auto min-w-[320px] cursor-pointer overflow-hidden small:mx-0">
         <div className="project__image relative h-full w-full">
           <Image
             className="absolute left-0 top-0 w-full object-contain transition-all duration-[1000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:top-[100%] group-hover:translate-y-[-100%]"
@@ -37,7 +37,7 @@ const ProjectItem = ({ project }: { project: ProjectType }) => {
             ))}
           </ul>
           <div className="project-footer">
-            <h4 className="pb-4 font-semibold uppercase">Tech:</h4>
+            <h4 className="pb-2 font-semibold uppercase">Tech:</h4>
             <Badges tech={project.tech} />
             <div className="project__cta absolute bottom-[5%] left-0 right-0 mx-auto mt-auto flex w-fit items-center justify-center gap-6">
               <ButtonLink
