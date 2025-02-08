@@ -178,6 +178,86 @@ export const projects: ProjectType[] = [
     ]
   },
   {
+    title: 'Consilium Academy Trust',
+    image: 'consilium-trust',
+    features: [
+      'Bespoke, multi-feature site showcasing academies nationwide',
+      'Customisable interactive map with editable pin locations and logos'
+    ],
+    tech: ['CSS', 'ASP.NET', 'JavaScript'],
+    websiteLink: 'https://consiliumtrust.ovw9.devwebsite.co.uk/',
+    innerPageLink: 'consilium-academy-trust',
+    projectType: 'Employed (Juniper Education)',
+    description: [
+      'Consilium Academy Trust is a bespoke website built to highlight the academies across the country. Designed with a clean, modern aesthetic, the site employs multiple load-in animations and subtle styling to enhance user engagement. It is fully responsive and future-proofed to accommodate the addition of new schools as the trust expands.'
+    ],
+    fullFeatureList: [
+      'Customisable interactive map using SVG coordinates, allowing pin locations and logos to be edited via the in-house CMS',
+      'Multiple load-in animations for a dynamic and engaging user experience',
+      'Subtle yet effective styling that demonstrates advanced CSS techniques',
+      'Fully responsive design optimised for all devices',
+      'Future-proof architecture to seamlessly integrate additional schools as the trust grows',
+      'Clean build with adaptable SVG sections that adjust to different screen sizes'
+    ]
+  },
+  {
+    title: 'Consortium Academy Trust',
+    image: 'consortium-trust',
+    features: [
+      'Bespoke academy trust site with a dynamic, intuitive design',
+      'Subtle hero and section load-in animations',
+      'Fully responsive layout across all devices'
+    ],
+    tech: ['CSS', 'ASP.NET', 'JavaScript', 'WCAG'],
+    websiteLink: 'https://consortiumacademytrust.ovw5.devwebsite.co.uk/',
+    innerPageLink: 'consortium-academy-trust',
+    projectType: 'Employed (Juniper Education)',
+    description: [
+      'This academy trust website is a bespoke build designed to showcase the trust’s unique qualities while enabling customisation through an in-house CMS. The site features subtle animations on the hero images and throughout its sections, creating a lively yet professional user experience. With a pixel‐perfect build and fully responsive design, the project leverages advanced SCSS techniques for precise element positioning and styling.'
+    ],
+    fullFeatureList: [
+      'Subtle hero animations that create a dynamic and intuitive feel',
+      'Custom section load-in animations for engaging content transitions',
+      'Pixel‐perfect design ensuring high precision and quality',
+      'Fully responsive layout optimised for all devices',
+      'Advanced SCSS skills used for detailed element positioning and styling',
+      'Interactive custom map with editable pins: Users can set pin locations via the in-house CMS by utilising SVG coordinates. In admin mode, clients can hover over the map to determine the mouse position within the SVG, with a tooltip providing the coordinates for easy copying.',
+      'Custom Vacancies page built to showcase the trust’s distinctive qualities',
+      'Fully responsive custom slide-out menu adaptable to all screen sizes',
+      'WCAG-compliant, ensuring accessibility for all users'
+    ]
+  },  
+  {
+    title: 'Aurora Academy Trust',
+    image: 'Aurora-trust',
+    features: [
+      'Bespoke, dynamic design with intuitive animations',
+      'Fully editable via an in‐house CMS with customisable colour schemes'
+    ],
+    tech: ['CSS', 'ASP.NET', 'JavaScript', 'WCAG'],
+    websiteLink: 'https://consortiumacademytrust.ovw5.devwebsite.co.uk/',
+    innerPageLink: 'consortium-academy-trust',
+    projectType: 'Employed (Juniper Education)',
+    description: [
+      'Aurora Academy Trust is a bespoke website built to deliver a dynamic and engaging user experience for an academy trust. Developed with a focus on customisation and maintainability, the site employs a rich palette of colours and opacity effects—managed through CSS variables—to ensure rapid development and ease of future updates. Advanced CSS techniques, including the use of clippaths and SVGs, create a unique, custom look and feel throughout the design.'
+    ],
+    fullFeatureList: [
+      'Subtle hero animations that create a dynamic and intuitive feel',
+      'Custom section load-in animations for smooth content transitions',
+      'Pixel‐perfect design ensuring high precision and quality',
+      'Extensive use of various colour tones and opacity effects via CSS variables for quick development and easy maintainability',
+      'Advanced use of clippaths and SVGs to craft a distinctive visual identity',
+      'Multiple hover transitions enhancing interactivity across the site',
+      'Interactive multipin Google map that displays academy details on click—using SVG coordinates for precise pin placement, with details accessible in admin mode',
+      'Fully editable design via the CMS, including the ability to update colours as needed',
+      'Custom smooth scrolling (with a dedicated scroll button) and seamless section load-in animations',
+      'WCAG-compliant design ensuring accessibility for all users',
+      'News swiper implemented with Swiper.js and custom vanilla JavaScript to present updates in a uniquely styled grid',
+      'Scrolling animations on watermarks that utilise the client’s window position for added dynamism'
+    ]
+  },
+  
+  {
     title: 'Guru Nanak Sich Academy',
     image: 'gurununak',
     features: [
