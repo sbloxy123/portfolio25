@@ -1,4 +1,9 @@
 {
+  "project-captioned-images/rosco/rosco-contact-form.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738964497/my-site/project-captioned-images/rosco/rosco-contact-form.png",
+  "project-captioned-images/rosco/rosco-faq.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738964498/my-site/project-captioned-images/rosco/rosco-faq.png",
+  "project-captioned-images/rosco/rosco-image-slider.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738964500/my-site/project-captioned-images/rosco/rosco-image-slider.png",
+  "project-captioned-images/rosco/rosco-search.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738964501/my-site/project-captioned-images/rosco/rosco-search.png",
+  "project-captioned-images/rosco/rosco-swiper.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738964502/my-site/project-captioned-images/rosco/rosco-swiper.png",
   "projects/churchill.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738793684/my-site/projects/churchill.png",
   "projects/gurununak.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738793685/my-site/projects/gurununak.png",
   "projects/rosco.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738793686/my-site/projects/rosco.png",
@@ -15,16 +20,20 @@
   "stack-icons/adobeXD.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738792574/my-site/stack-icons/adobeXD.png",
   "stack-icons/bootstrap.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738792575/my-site/stack-icons/bootstrap.png",
   "stack-icons/cloudinary.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738792575/my-site/stack-icons/cloudinary.png",
-  "stack-icons/figma.svg": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738792576/my-site/stack-icons/figma.svg",
+  "stack-icons/digital-ocean.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738967182/my-site/stack-icons/digital-ocean.png",
+  "stack-icons/figma.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738967183/my-site/stack-icons/figma.png",
+  "stack-icons/figma.svg": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738967184/my-site/stack-icons/figma.svg",
   "stack-icons/gatsbyjs.svg": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738792578/my-site/stack-icons/gatsbyjs.svg",
   "stack-icons/git.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738792579/my-site/stack-icons/git.png",
   "stack-icons/heroku.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738792580/my-site/stack-icons/heroku.png",
   "stack-icons/mapbox.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738792581/my-site/stack-icons/mapbox.png",
   "stack-icons/next-js.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738792581/my-site/stack-icons/next-js.png",
   "stack-icons/postgresql.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738792582/my-site/stack-icons/postgresql.png",
+  "stack-icons/sanity.svg": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738967190/my-site/stack-icons/sanity.svg",
   "stack-icons/stimulus.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738792582/my-site/stack-icons/stimulus.png",
   "stack-icons/strapi.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738792583/my-site/stack-icons/strapi.png",
   "stack-icons/styled-components.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738792583/my-site/stack-icons/styled-components.png",
   "stack-icons/swiper.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738792584/my-site/stack-icons/swiper.png",
-  "stack-icons/tailwind.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738792585/my-site/stack-icons/tailwind.png"
+  "stack-icons/tailwind.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738792585/my-site/stack-icons/tailwind.png",
+  "stack-icons/typescript.png": "https://res.cloudinary.com/ddthn74qt/image/upload/v1738966203/my-site/stack-icons/typescript.png"
 }

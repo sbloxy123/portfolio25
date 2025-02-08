@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import DocumentIcon from './DocumentIcon';
 import GithubIcon from './GithubIcon';
 import LinkedInIcon from './LinkedInIcon';
+import Link from 'next/link';
 
 export interface Icon {
   title: string;
@@ -57,7 +58,7 @@ const IconLinks = ({
   };
 
   return (
-    <motion.div
+    <motion.ul
       className="w-fit leading-none"
       variants={iconContainer}
       initial={initialState}
@@ -67,14 +68,9 @@ const IconLinks = ({
         const rotateValue = index % 2 === 0 ? 3 : -3;
 
         return (
-          <motion.a
-            variants={iconItem}
-            // download={icon.title === 'CV' ? true : undefined}
-            href={`${icon.url}`}
-            target="_blank"
-            title={`${icon.title == 'CV' ? 'Download' : 'Link to'} my ${icon.title}`}
-            aria-label={`${icon.title == 'CV' ? 'Download' : 'Link to'} "my ${icon.title} (opens in new window)"`}
+          <motion.li
             key={index}
+            variants={iconItem}
             whileHover={{
               rotate: rotateValue,
               scale: 1.1,
@@ -82,14 +78,22 @@ const IconLinks = ({
             }}
             className="icon__link group relative mr-4 inline-block h-[3rem] px-3 text-foreground transition-colors duration-300 last:mr-0 hover:text-theme_green"
           >
-            <icon.component />
-            <span className="pointer-events-none absolute left-[50%] top-[115%] min-w-[5rem] -translate-x-1/2 rounded-sm border border-theme_green bg-white bg-opacity-10 px-2 py-1 text-center text-2xl opacity-0 bg-blend-soft-light backdrop-blur-sm transition-opacity duration-500 group-hover:opacity-100">
-              {icon.title}
-            </span>
-          </motion.a>
+            <Link
+              // download={icon.title === 'CV' ? true : undefined}
+              href={`${icon.url}`}
+              target="_blank"
+              aria-label={`${icon.title == 'CV' ? 'Download' : 'Link to'} "my ${icon.title} (opens in new window)"`}
+              title={`${icon.title == 'CV' ? 'Download' : 'Link to'} my ${icon.title}`}
+            >
+              <icon.component />
+              <span className="pointer-events-none absolute left-[50%] top-[115%] min-w-[5rem] -translate-x-1/2 rounded-sm border border-theme_green bg-white bg-opacity-10 px-2 py-1 text-center text-2xl opacity-0 bg-blend-soft-light backdrop-blur-sm transition-opacity duration-500 group-hover:opacity-100">
+                {icon.title}
+              </span>
+            </Link>
+          </motion.li>
         );
       })}
-    </motion.div>
+    </motion.ul>
   );
 };
 

@@ -80,6 +80,18 @@ ul {
   }
 }
 
+.swiper__nav__container {
+  visibility: hidden;
+  .swiper__nav__button {
+    visibility: visible;
+  }
+
+  .swiper-button-disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
+
 .pattern__overlay {
   position: absolute;
   top: auto;

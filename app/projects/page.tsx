@@ -6,7 +6,7 @@ import ProjectItem from '@/components/ProjectItem';
 import Stack from '@/components/sections/Stack';
 import Link from 'next/link';
 import { useTitleNav } from '@/contexts/TitleNavContext';
-import { projects } from '../data/projects-data';
+import { projects, ProjectType } from '../data/projects-data';
 
 export default function Projects() {
   const [isSticky, setIsSticky] = useState(false);
@@ -31,6 +31,41 @@ export default function Projects() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [setTitleInNav]);
+
+  const techArr: string[] = [];
+  projects.forEach((project) => {
+    project.tech.forEach((t) => {
+      techArr.push(t);
+    });
+  });
+  const uniqueTech = Array.from(new Set(techArr));
+
+  const [selectedTech, setSelectedTech] = useState<string[]>([]);
+  const [filteredProjects, setFilteredProjects] = useState<ProjectType[]>(projects);
+
+  useEffect(() => {
+    if (selectedTech.length === 0) {
+      // If no tech selected, show all
+      setFilteredProjects(projects);
+    } else {
+      // Filter: project must have all selected tech
+      const newFiltered = projects.filter((p) =>
+        selectedTech.every((tech) => p.tech.includes(tech)),
+      );
+      setFilteredProjects(newFiltered);
+    }
+  }, [selectedTech]);
+
+  const handleBadgeClick = (tech: string) => {
+    // If tech is already selected, remove it
+    if (selectedTech.includes(tech)) {
+      setSelectedTech(selectedTech.filter((t) => t !== tech));
+    } else {
+      // Otherwise, add it
+      setSelectedTech([...selectedTech, tech]);
+    }
+  };
+
   return (
     <>
       <div className="mt-[14rem]">
@@ -54,8 +89,29 @@ export default function Projects() {
         <section className="projects__page__section my-36 px-[5%] small:px-layout-small">
           <h2 className="section__title text-center xsmall:w-full">Projects.</h2>
 
+          <h4 className="pb-4">Filter by tech:</h4>
+          <ul className="badge__list flex flex-wrap gap-4">
+            {uniqueTech.map((tech, index) => {
+              // Is this badge active?
+              const isActive = selectedTech.includes(tech);
+
+              return (
+                <li
+                  key={index}
+                  onClick={() => handleBadgeClick(tech)}
+                  className={`badge__item flex w-fit cursor-pointer items-center justify-center rounded-md border border-theme_light_orange px-3 py-2 transition-colors duration-300 ${
+                    isActive
+                      ? 'border-r-theme_dark_orange bg-theme_light_orange text-background'
+                      : 'bg-[rgba(var(--orange-opac),0.1)] text-theme_light_orange hover:bg-[rgba(var(--orange-opac),0.2)]'
+                  }`}
+                >
+                  <span className="font-font_inter text-[1.4rem]">{tech}</span>
+                </li>
+              );
+            })}
+          </ul>
           <ul className="projects__list flex flex-wrap justify-center gap-10 pt-10">
-            {projects.map((project, index) => {
+            {filteredProjects.map((project, index) => {
               return (
                 <li key={index} className="">
                   <ProjectItem project={project} />

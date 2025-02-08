@@ -10,6 +10,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Mousewheel, FreeMode, Grid } from 'swiper/modules';
 import { stackItemType } from '../sections/Stack';
 import Image from 'next/image';
+import SwiperNavButton from '../SwiperNavButton';
 
 const StackSwiper = ({ stack }: { stack: stackItemType[] }) => {
   function getCloudinaryUrl(publicId: string) {
@@ -22,11 +23,15 @@ const StackSwiper = ({ stack }: { stack: stackItemType[] }) => {
       slidesPerView="auto"
       modules={[Navigation, Mousewheel, FreeMode, Grid]}
       wrapperTag="ul"
-      className="stack__swiper"
+      className="stack__swiper relative mb-20"
       mousewheel={{
         forceToAxis: true,
         sensitivity: 1,
         releaseOnEdges: true,
+      }}
+      navigation={{
+        nextEl: '.next-stack',
+        prevEl: '.prev-stack',
       }}
       grid={{
         rows: 3,
@@ -52,6 +57,10 @@ const StackSwiper = ({ stack }: { stack: stackItemType[] }) => {
           </SwiperSlide>
         );
       })}
+      <div className="swiper__nav__container absolute bottom-0 left-0 right-0 top-auto m-auto flex h-fit w-[10rem] translate-y-[80px] items-center justify-between">
+        <SwiperNavButton className="prev-stack" direction="prev" background="light" />
+        <SwiperNavButton className="next-stack" direction="next" background="light" />
+      </div>
     </Swiper>
   );
 };

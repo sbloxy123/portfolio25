@@ -16,9 +16,9 @@ const ButtonLink = ({
   return (
     <Link
       href={hrefDestination}
-      aria-label={ariaLabel && ariaLabel}
+      aria-label={`${ariaLabel && ariaLabel} ${target == 'new window' && '(opens in new window)'}`}
       target={`${target == 'new window' ? '_blank' : ''}`}
-      className={`group/button relative flex min-w-[140px] items-center justify-between overflow-hidden rounded-md px-4 py-4 font-font_anonymous text-[1.4rem] font-semibold uppercase leading-[1.4] transition-colors duration-300 hover/button:text-background`}
+      className={`group/button relative flex min-h-[44px] min-w-[140px] items-center justify-around overflow-hidden rounded-md py-4 pl-4 pr-6 font-font_anonymous text-[1.4rem] font-semibold uppercase leading-[1.4] transition-colors duration-300 hover/button:text-background`}
     >
       <div
         className={`button__link__bg animate-pulse-slow absolute inset-0 border-2 transition-all duration-300 backdrop:blur-sm group-hover/button:animate-none group-hover/button:border-[rgba(var(--background-opac),0.5)] ${buttonType == 'primary' ? 'border-theme_green bg-[rgba(var(--green-opac),0.2)] group-hover/button:bg-theme_green' : 'border-theme_dark_orange bg-[rgba(var(--orange-opac),0.2)] group-hover/button:bg-theme_light_orange'}`}

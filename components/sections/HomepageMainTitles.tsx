@@ -31,7 +31,7 @@ const HomepageMainTitles = () => {
     >
       <h1 className="page__title">
         <span
-          className={`name__title block pb-4 font-font_anonymous text-[clamp(2.5rem,1.9vw,3.6rem)] ${isSticky ? 'opacity-0' : 'opacity-100'}`}
+          className={`name__title block pb-4 font-font_anonymous text-[clamp(2.5rem,1.9vw,3.6rem)] transition-opacity duration-300 ${isSticky ? 'opacity-0' : 'opacity-100'}`}
         >
           Stuart Bloxham.{' '}
         </span>

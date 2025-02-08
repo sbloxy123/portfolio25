@@ -17,7 +17,7 @@ const experienceList: ExperienceJobType[] = [
       'Build and maintain websites for an array of education institutions, ensuring  seamless usability and accessibility to their users. Strong focus on creating flexible and playful user interfaces to maximise user engagement. Work closely with cross-functional teams such as Designers, Developers and Project Managers to ensure client satisfaction.',
     commenceDate: 'SEPT 2023',
     finalDate: 'present',
-    tech: ['Javascript', 'HTML & SCSS', 'WCAG', 'Swiper.js', 'Adobe XD'],
+    tech: ['Javascript', 'HTML & SCSS', 'WCAG (accessibility)', 'Swiper.js', 'Adobe XD'],
   },
   {
     title: 'Freelance Next.Js Developer',

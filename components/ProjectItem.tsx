@@ -13,7 +13,7 @@ const ProjectItem = ({ project }: { project: ProjectType }) => {
 
   return (
     <div className="">
-      <div className="project__item__container group relative mx-auto aspect-[330/467] h-auto w-[330px] max-w-[330px] cursor-pointer overflow-hidden small:mx-0">
+      <div className="project__item__container group relative mx-auto aspect-[330/467] h-auto min-w-[320px] cursor-pointer overflow-hidden small:mx-0">
         <div className="project__image relative h-full w-full">
           <Image
             className="absolute left-0 top-0 w-full object-contain transition-all duration-[1000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:top-[100%] group-hover:translate-y-[-100%]"
@@ -52,7 +52,7 @@ const ProjectItem = ({ project }: { project: ProjectType }) => {
                   buttonType="secondary"
                   text="Read More"
                   ariaLabel={`Read more about ${project.title}`}
-                  hrefDestination={`projects/${project.innerPageLink}`}
+                  hrefDestination={`/projects/${project.innerPageLink}`}
                 />
               )}
             </div>

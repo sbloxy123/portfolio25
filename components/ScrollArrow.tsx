@@ -21,7 +21,9 @@ export const ScrollArrow = () => {
       className="scroll__button__hidden bg-theme_peach-900 fixed bottom-[10%] right-[2rem] z-50 aspect-square w-[4.5rem] rounded-full mix-blend-difference shadow-lg"
     >
       <a
-        href="#top"
+        href="#header"
+        title="scroll to top"
+        aria-label="scroll to top of page"
         className="bg-orange flex h-[5rem] w-[5rem] items-center justify-center rounded-full border-[3px] border-theme_dark_orange bg-[rgba(var(--orange-opac),0.9)]"
       >
         <span className="flex items-center justify-center">

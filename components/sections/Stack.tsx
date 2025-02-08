@@ -14,21 +14,38 @@ export type stackItemType = {
 
 const stack: stackItemType[] = [
   {
-    title: 'Bootstrap',
-    image: 'bootstrap.png',
-  },
-  {
-    title: 'Cloudinary',
-    image: 'cloudinary.png',
+    title: 'HTML5',
+    image: 'HTML5.png',
   },
   {
     title: 'CSS',
     image: 'css3.png',
   },
   {
-    title: 'Figma',
-    image: 'figma.svg',
+    title: 'SCSS',
+    image: 'SCSS.png',
   },
+  {
+    title: 'Styled Components',
+    image: 'styled-components.png',
+  },
+  {
+    title: 'Tailwind CSS',
+    image: 'tailwind.png',
+  },
+  {
+    title: 'Bootstrap',
+    image: 'bootstrap.png',
+  },
+  {
+    title: 'Javascript',
+    image: 'Javascript.png',
+  },
+  {
+    title: 'Typescript',
+    image: 'typescript.png',
+  },
+
   {
     title: 'Gatsby',
     image: 'gatsbyjs.svg',
@@ -41,40 +58,30 @@ const stack: stackItemType[] = [
     title: 'Heroku',
     image: 'heroku.png',
   },
+
   {
-    title: 'HTML5',
-    image: 'HTML5.png',
-  },
-  {
-    title: 'Javascript',
-    image: 'Javascript.png',
-  },
-  {
-    title: 'Mapbox',
-    image: 'mapbox.png',
+    title: 'Digital Ocean',
+    image: 'digital-ocean.png',
   },
   {
     title: 'Netlify',
     image: 'netlify.svg',
+  },
+
+  {
+    title: 'React',
+    image: 'React.png',
   },
   {
     title: 'Next Js',
     image: 'next-js.png',
   },
   {
-    title: 'Postgres',
-    image: 'postgresql.png',
-  },
-  {
-    title: 'React',
-    image: 'React.png',
-  },
-  {
     title: 'Ruby on Rails',
     image: 'Ror.png',
   },
   {
-    title: 'Stimulus',
+    title: 'Stimulus JS',
     image: 'Stimulus.png',
   },
   {
@@ -82,25 +89,32 @@ const stack: stackItemType[] = [
     image: 'Strapi.png',
   },
   {
-    title: 'Styled Components',
-    image: 'styled-components.png',
+    title: 'Sanity CMS',
+    image: 'sanity.svg',
   },
   {
-    title: 'Tailwind CSS',
-    image: 'tailwind.png',
-  },
-
-  {
-    title: 'Swiper Js',
-    image: 'swiper.png',
+    title: 'Postgres',
+    image: 'postgresql.png',
   },
   {
-    title: 'SCSS',
-    image: 'SCSS.png',
+    title: 'Figma',
+    image: 'figma.svg',
   },
   {
     title: 'Adobe XD',
     image: 'adobeXD.png',
+  },
+  {
+    title: 'Mapbox',
+    image: 'mapbox.png',
+  },
+  {
+    title: 'Cloudinary',
+    image: 'cloudinary.png',
+  },
+  {
+    title: 'Swiper Js',
+    image: 'swiper.png',
   },
 ];
 
@@ -132,6 +146,7 @@ const Stack = () => {
                 height={100}
                 src={publicId}
                 alt={`${stackItem.title} logo`}
+                title={`${stackItem.title}`}
                 className="h-full w-full object-contain"
               />
             </li>

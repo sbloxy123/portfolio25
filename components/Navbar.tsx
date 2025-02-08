@@ -23,12 +23,13 @@ const Navbar = () => {
   return (
     <header
       className={`header fixed left-0 right-0 top-0 z-20 mx-auto flex min-h-[70px] w-full items-center justify-between border-b-2 border-[rgba(var(--green-opac),0.5)] px-[5%] py-[2rem] backdrop-blur-sm xsmall:min-h-[103px] xsmall:py-[3rem] small:px-layout-small ${toggleMenu ? 'bg-transparent' : 'bg-[rgba(var(--background-opac),0.5)]'} `}
+      id="header"
     >
       <div className="relative">
         <Link
           href="/"
           aria-label="Link to homepage"
-          className={`name__title font-font_anonymous text-[clamp(2.5rem,1.9vw,3.6rem)] transition-all duration-300 hover:text-theme_green ${isTitleInNav ? 'opacity-100' : pathname == '/' ? 'opacity-0' : 'opacity-100'}`}
+          className={`name__title block min-h-[44px] content-center font-font_anonymous text-[clamp(2.5rem,1.9vw,3.6rem)] transition-all duration-300 hover:text-theme_green ${isTitleInNav ? 'opacity-100' : pathname == '/' ? 'opacity-0' : 'opacity-100'}`}
         >
           Stuart Bloxham
           <span className="small:hidden">.</span>
