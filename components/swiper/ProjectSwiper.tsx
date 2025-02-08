@@ -17,7 +17,7 @@ const ProjectSwiper = ({ projects }: { projects: ProjectType[] }) => {
     <Swiper
       spaceBetween={20}
       slidesPerView="auto"
-      className="project__swiper relative"
+      className="project__swiper relative mt-10"
       wrapperTag="ul"
       modules={[Navigation, Mousewheel, FreeMode]}
       mousewheel={{
@@ -39,7 +39,7 @@ const ProjectSwiper = ({ projects }: { projects: ProjectType[] }) => {
         </SwiperSlide>
       ))}
 
-      <div className="swiper__nav__container absolute bottom-0 left-0 top-0 m-auto flex h-fit w-full items-center justify-between">
+      <div className="swiper__nav__container absolute bottom-0 left-0 right-0 top-auto m-auto flex h-fit w-full items-center justify-between translate-y-[155%] xsmall:left-auto xsmall:max-w-[120px] xsmall:translate-y-[210%]">
         <SwiperNavButton direction="prev" className="prev-project" />
         <SwiperNavButton direction="next" className="next-project" />
       </div>

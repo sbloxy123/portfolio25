@@ -57,7 +57,7 @@ const StackSwiper = ({ stack }: { stack: stackItemType[] }) => {
           </SwiperSlide>
         );
       })}
-      <div className="swiper__nav__container absolute bottom-0 left-0 right-0 top-auto m-auto flex h-fit w-[10rem] translate-y-[80px] items-center justify-between">
+      <div className="swiper__nav__container absolute bottom-0 left-0 right-0 top-auto m-auto flex h-fit max-w-[120px] translate-y-[80px] items-center justify-between">
         <SwiperNavButton className="prev-stack" direction="prev" background="light" />
         <SwiperNavButton className="next-stack" direction="next" background="light" />
       </div>

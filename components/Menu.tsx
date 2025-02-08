@@ -7,6 +7,7 @@ const menuItems = [
   { href: '/#experience', title: 'experience' },
   { href: '/projects', title: 'Projects' },
   { href: '/#stack', title: 'Stack' },
+  { href: 'Stuart-Bloxham-CV-web-developer.pdf', title: 'CV' },
   { href: '/#contact', title: 'Contact' },
 ];
 
@@ -39,7 +40,7 @@ const MenuItem = ({
     <motion.li variants={menuItem}>
       <Link
         href={href}
-        className="ml-auto block w-fit font-font_anonymous text-[4.8rem] uppercase text-foreground transition-colors duration-300 hover:text-theme_green"
+        className="ml-auto block w-fit min-w-[140px] text-right font-font_anonymous text-[4.8rem] uppercase text-foreground transition-colors duration-300 hover:text-theme_green"
         onClick={() => closeMenu()}
       >
         {children}

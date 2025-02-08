@@ -14,7 +14,7 @@ const Navbar = () => {
 
   const breadcrumb = pathname.split('/');
 
-  console.log(breadcrumb.length);
+  // console.log(breadcrumb.length);
 
   const closeMenu = () => {
     setToggleMenu(false);

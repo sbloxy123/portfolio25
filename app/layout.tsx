@@ -41,7 +41,7 @@ export default function RootLayout({
           <Navbar />
           <ScrollArrow />
 
-          <div className="pattern__bg fixed right-0 top-[101px] -z-10 h-[700px] w-[400px]">
+          <div className="pattern__bg fixed right-0 top-[70px] small:top-[103px] -z-10 h-[700px] w-[400px]">
             <div className="pattern__overlay"></div>
             <svg width="100%" height="100%">
               <pattern
