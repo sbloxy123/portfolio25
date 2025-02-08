@@ -59,7 +59,7 @@ const experienceList: ExperienceJobType[] = [
 
 const ExperienceSection = () => {
   return (
-    <section
+    <div
       className="experience__section mt-20 max-w-[850px] px-[5%] small:ml-auto small:w-[60%] small:pl-0 small:pr-layout-small medium:w-1/2"
       id="experience"
     >
@@ -70,7 +70,7 @@ const ExperienceSection = () => {
           <ExperienceItem key={index} experience={experience} />
         ))}
       </ul>
-    </section>
+    </div>
   );
 };
 

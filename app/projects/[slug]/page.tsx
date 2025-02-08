@@ -30,7 +30,7 @@ export default async function Page({ params }: PageProps) {
 
   return (
     <>
-      <div className="project__heading px-[5%] pt-20 small:px-layout-small">
+      <div className="project__heading max-w-screen-large mx-auto px-[5%] pt-20 small:px-layout-small">
         <h1 className="pt-48 text-[clamp(1.8rem,6cqw,2.4rem)]">
           <span className="pr-4">Project</span> •{' '}
           <span className="pl-4 font-bold">{project.title}</span>{' '}
@@ -65,7 +65,7 @@ export default async function Page({ params }: PageProps) {
         </Link>
       </div>
 
-      <section className="project__top relative flex flex-col-reverse items-start px-[5%] pt-32 small:flex-row small:justify-between small:gap-20 small:px-layout-small">
+      <section className="project__top max-w-screen-large mx-auto relative flex flex-col-reverse items-start px-[5%] pt-32 small:flex-row small:justify-between small:gap-20 small:px-layout-small">
         <article className="project__info font-font_anonymous tracking-[0.1em]">
           <div className="project__description pb-10">
             {project.description?.map((paragraph, index) => (
@@ -89,7 +89,7 @@ export default async function Page({ params }: PageProps) {
       </section>
 
       {project.captionedImages && (
-        <section className="captioned__images px-[5%] small:px-layout-small">
+        <section className="captioned__images max-w-screen-large mx-auto px-[5%] small:px-layout-small">
           <h2 className="py-20">Bonus Information</h2>
 
           {project.captionedImages?.map((captionedImage, index) => {

@@ -15,9 +15,11 @@ const ProjectsSection = () => {
 
   return (
     <section
-      className="projects__section relative overflow-x-hidden bg-background px-[5%] pb-28 pt-20 xsmall:mt-20 small:px-layout-small"
+      className="projects__section  relative overflow-x-hidden bg-background  pb-28 pt-20 xsmall:mt-20 small"
       id="projects"
     >
+      <div className="max-w-screen-large mx-auto px-[5%] small:px-layout-small">
+
       <h2 className="section__title">Projects.</h2>
       <h4 className="pb-4">Filter by tech:</h4>
       <FilterProjectByTech projects={projects} onFilterChange={handleFilterChange} />
@@ -31,8 +33,9 @@ const ProjectsSection = () => {
           buttonType="primary"
           ariaLabel="Visit my projects page"
           hrefDestination="/projects"
-        />
+          />
       </div>
+          </div>
     </section>
   );
 };

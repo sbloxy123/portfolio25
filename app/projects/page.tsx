@@ -58,7 +58,7 @@ export default function Projects() {
           </h1>
         </div>
 
-        <section className="projects__page__section my-36 px-[5%] small:px-layout-small">
+        <section className="projects__page__section my-36 px-[5%] small:px-layout-small max-w-screen-large mx-auto">
           <h2 className="section__title text-center xsmall:w-full">Projects.</h2>
 
           <h4 className="pb-4">Filter by tech:</h4>

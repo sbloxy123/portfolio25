@@ -39,7 +39,7 @@ const IntroSection = () => {
     { title: 'stack', linkHref: '#stack' },
   ];
   return (
-    <section
+    <div
       className="intro__section px-[5%] pt-24 font-font_anonymous text-[2rem] xsmall:mt-20 small:flex small:justify-between small:px-layout-small"
       id="about__me"
     >
@@ -78,7 +78,7 @@ const IntroSection = () => {
           Github.
         </p>
       </div>
-    </section>
+    </div>
   );
 };
 

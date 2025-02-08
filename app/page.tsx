@@ -7,12 +7,12 @@ import Stack from '@/components/sections/Stack';
 export default function Home() {
   return (
     <>
-      <div className="relative">
+      <section className="relative max-w-screen-large mx-auto">
         <HomepageMainTitles />
 
         <IntroSection />
         <ExperienceSection />
-      </div>
+      </section>
       <ProjectsSection />
       <Stack />
     </>

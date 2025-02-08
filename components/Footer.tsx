@@ -34,7 +34,7 @@ const contactIcon: ExtendedIcon[] = [
 
 const Footer = () => {
   return (
-    <footer className="relative bg-background px-[5%] py-40 small:px-layout-small">
+    <footer className="relative bg-background px-[5%] py-40 max-w-screen-large mx-auto small:px-layout-small">
       <div className="pattern__bg absolute right-0 top-0 h-[700px] w-[400px]">
         <div className="pattern__overlay"></div>
         <svg width="100%" height="100%">

@@ -126,20 +126,22 @@ const Stack = () => {
 
   return (
     <section
-      className="stack__section relative z-10 border-[3px] border-b-theme_green border-t-theme_green bg-white px-[5%] py-20 small:px-layout-small"
+      className="stack__section relative z-10 border-[3px] border-b-theme_green border-t-theme_green bg-white  py-20 "
       id="stack"
     >
+      <div className='max-w-screen-large mx-auto px-[5%] small:px-layout-small'>
+
       <div className="absolute inset-0 bg-[rgba(var(--background-opac),0.2)] mix-blend-color"></div>
       <h2 className="section__title relative text-background">My Stack.</h2>
 
       <ul className="relative hidden flex-wrap items-start justify-between gap-[1.9rem] py-10 xsmall:flex">
         {stack.map((stackItem, index) => {
           const publicId = getCloudinaryUrl(stackItem.image);
-
+          
           return (
             <li
-              key={index}
-              className="aspect-[3/2] h-auto w-[12%] min-w-[100px] last-of-type:mr-auto"
+            key={index}
+            className="aspect-[3/2] h-auto w-[12%] min-w-[100px] last-of-type:mr-auto"
             >
               <Image
                 width={100}
@@ -148,7 +150,7 @@ const Stack = () => {
                 alt={`${stackItem.title} logo`}
                 title={`${stackItem.title}`}
                 className="h-full w-full object-contain"
-              />
+                />
             </li>
           );
         })}
@@ -157,6 +159,7 @@ const Stack = () => {
       <div className="py-10 xsmall:hidden">
         <DynamicStackSwiper stack={stack} />
       </div>
+        </div>
     </section>
   );
 };

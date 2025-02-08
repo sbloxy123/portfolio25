@@ -26,7 +26,7 @@ const ProjectItem = ({ project }: { project: ProjectType }) => {
         </div>
         <div className="project__item__content absolute inset-0 border-spacing-1 border border-theme_green bg-[rgba(var(--green-opac),0.05)] p-[5%] opacity-0 transition-opacity delay-[100] duration-700 group-hover:opacity-100">
           <h3 className="font-semibold uppercase">Key features</h3>
-          <ul className="project__feature__summary__list my-4 max-h-[45%] min-h-[45%] overflow-auto">
+          <ul className="project__feature__summary__list my-4 max-h-[46%] min-h-[46%] overflow-auto">
             {project.features.map((feature, index) => (
               <li
                 className="ml-[5%] list-item list-disc font-font_anonymous text-[1.6rem]"
