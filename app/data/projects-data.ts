@@ -30,7 +30,7 @@ export const projects: ProjectType[] = [
       'Extensive utilisation of Next.js features',
       'Comprehensive integration with Sanity.io, including a live-edit preview mode',
     ],
-    tech: ['Next.js', 'Tailwind', 'JavaScript', 'React', 'TypeScript', 'Github', 'Sanity.io CMS'],
+    tech: ['Next.js', 'Tailwind CSS', 'JavaScript', 'React', 'TypeScript', 'GitHub', 'Sanity.io CMS'],
     websiteLink: 'https://www.roscoandperlini.co.uk',
     innerPageLink: 'rosco-and-perlini',
     projectType: 'Freelance',
@@ -91,13 +91,13 @@ export const projects: ProjectType[] = [
       'Clean, seamless user experience'
     ],
     tech: [
-      'Next.js 14',
+      'Next.js',
       'Tailwind CSS',
       'Typescript',
       'React Motion',
       'Figma',
       'Google Analytics',
-      'Github'
+      'GitHub'
     ],
     websiteLink: 'https://www.bloxywebservices.co.uk',
     innerPageLink: 'bloxy-web-services',
@@ -127,7 +127,7 @@ export const projects: ProjectType[] = [
       'Integrated subtle animations to enhance user experience'
     ],
     tech: [
-      'Next.js 13.4',
+      'Next.js',
       'Tailwind CSS',
       'React Motion',
       'TypeScript',
