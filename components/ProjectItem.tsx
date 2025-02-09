@@ -66,7 +66,7 @@ const ProjectItem = ({ project }: { project: ProjectType }) => {
                 customIcon={<GithubIcon />}
                 buttonType="primary"
                 text="Source Code"
-                ariaLabel={` visit ${project.title}'s website`}
+                ariaLabel={`view the source code for ${project.title} on Github`}
                 hrefDestination={project.githubLink}
                 target="new window"
                 />
