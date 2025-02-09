@@ -13,6 +13,7 @@ export type ProjectType = {
   tech: string[];
   websiteLink: string;
   innerPageLink?: string;
+  githubLink?: string;
   projectType?: string;
   fullFeatureList?: string[];
   description?: string[];
@@ -33,6 +34,7 @@ export const projects: ProjectType[] = [
     tech: ['Next.js', 'Tailwind CSS', 'JavaScript', 'React', 'TypeScript', 'GitHub', 'Sanity.io CMS'],
     websiteLink: 'https://www.roscoandperlini.co.uk',
     innerPageLink: 'rosco-and-perlini',
+    githubLink: 'https://github.com/sbloxy123/rosco',
     projectType: 'Freelance',
     description: [
       'A business website developed on a freelance basis utilising Next.js and Tailwind CSS, with Sanity.io serving as the Content Management System (CMS).',
@@ -101,6 +103,7 @@ export const projects: ProjectType[] = [
     ],
     websiteLink: 'https://www.bloxywebservices.co.uk',
     innerPageLink: 'bloxy-web-services',
+    githubLink: 'https://github.com/sbloxy123/bloxy_web_services24',
     projectType: 'Self/Freelance',
     description: [
       'Bloxy Web Services is my personal freelance website, designed to attract local businesses and serve as a platform for experimenting with modern web technologies outside of my full-time employment. The site showcases my design and technical development skills through a clean, seamless user experience that highlights past work.'
@@ -137,6 +140,7 @@ export const projects: ProjectType[] = [
     ],
     websiteLink: 'https://www.dr-mould.co.uk',
     innerPageLink: 'dr-mould',
+    githubLink: 'https://github.com/sbloxy123/dr-mould',
     projectType: 'Freelance',
     description: [
       'Dr Mould is a brochure website built for a local mould cleaning company that required an informative online presence to showcase their services. Developed with Next.js 13.4 and fully designed in Figma, the project was taken from design to production within one month. The website is hosted on Vercel with GitHub version control, and images are served from Cloudinary to ensure optimal performance. Styling is achieved using Tailwind CSS and React Motion, resulting in subtle load-in animations for text and an animated FAQ section that enriches the user experience.'
