@@ -7,14 +7,14 @@ import GithubIcon from './icons/GithubIcon';
 const ProjectItem = ({ project }: { project: ProjectType }) => {
   function getCloudinaryUrl(publicId: string) {
     const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
-    return `https://res.cloudinary.com/${cloudName}/image/upload/v1738793688/my-site/projects/${publicId}.png`;
+    return `https://res.cloudinary.com/${cloudName}/image/upload/v1739031131/my-site/projects/${publicId}.png`;
   }
 
   const publicId = getCloudinaryUrl(project.image);
 
   return (
     <div className="">
-      <div className="project__item__container group relative mx-auto aspect-[330/527] h-auto min-w-[320px] overflow-hidden small:mx-0">
+      <div className="project__item__container group relative mx-auto aspect-[330/515] h-auto min-w-[320px] overflow-hidden small:mx-0 shadow-[0_0_25px_rgba(var(--background-opac),0.25)] hover:shadow-[0_0_35px_rgba(var(--green-opac),0.15)] transition-shadow duration-300">
         <div className="project__image relative h-full w-full">
           <Image
             className="absolute left-0 top-0 w-full object-contain transition-all duration-[1000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:top-[100%] group-hover:translate-y-[-100%]"
@@ -45,7 +45,7 @@ const ProjectItem = ({ project }: { project: ProjectType }) => {
             
           </div>
         </div>
-        <div className="project__cta absolute bottom-[5%] left-0 right-0 mx-auto mt-auto flex w-fit items-center justify-center gap-6">
+        <div className="project__cta absolute bottom-[3%] left-0 right-0 mx-auto mt-auto flex w-fit items-center justify-center gap-6">
               {/* <ButtonLink
                 buttonType="primary"
                 text="Visit Website"

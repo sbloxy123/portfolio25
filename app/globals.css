@@ -348,3 +348,31 @@ ul {
 #scrollButton.scroll__button__hidden {
   opacity: 0;
 }
+
+
+.project__intro__screenshot__container {
+  &::-webkit-scrollbar {
+    width: 5.9px;
+    height: 4px;
+    /* overflow-clip-margin: 20px; */
+    background: transparent;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    width: 2px;
+    height: 20px;
+    padding: 20px;
+  }
+
+
+  &::-webkit-scrollbar-thumb {
+
+    background: rgba(var(--green-opac),0.85);
+    border-radius: 10px;
+    width: 9px;
+    height: 20px !important;
+  }
+
+}

@@ -189,7 +189,7 @@ export const projects: ProjectType[] = [
       'Customisable interactive map with editable pin locations and logos'
     ],
     tech: ['CSS', 'ASP.NET', 'JavaScript'],
-    websiteLink: 'https://consiliumtrust.ovw9.devwebsite.co.uk/',
+    websiteLink: 'https://www.consiliumtrust.ovw9.devwebsite.co.uk/',
     innerPageLink: 'consilium-academy-trust',
     projectType: 'Employed (Juniper Education)',
     description: [

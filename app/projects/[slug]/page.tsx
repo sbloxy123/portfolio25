@@ -5,6 +5,8 @@ import OverflowScrollScreenshot from '@/components/OverflowScrollScreenshot';
 import Image from 'next/image';
 import ProjectsSection from '@/components/sections/ProjectsSection';
 import Stack from '@/components/sections/Stack';
+import ButtonLink from '@/components/ButtonLink';
+import GithubIcon from '@/components/icons/GithubIcon';
 
 export async function generateStaticParams() {
   return projects.map((p) => ({ slug: p.innerPageLink }));
@@ -63,6 +65,19 @@ export default async function Page({ params }: PageProps) {
             </svg>
           </span>
         </Link>
+
+        <div className='w-fit mt-5'>
+          {project.githubLink && (
+            <ButtonLink
+            customIcon={<GithubIcon />}
+            buttonType="primary"
+            text="View Source Code"
+            ariaLabel={`view the source code for ${project.title} on Github`}
+            hrefDestination={project.githubLink}
+            target="new window"
+            />
+          )}
+        </div>
       </div>
 
       <section className="project__top max-w-screen-large mx-auto relative flex flex-col-reverse items-start px-[5%] pt-32 small:flex-row small:justify-between small:gap-20 small:px-layout-small">

@@ -1,6 +1,8 @@
 import { ProjectType } from '@/app/data/projects-data';
 import Image from 'next/image';
 import Link from 'next/link';
+import ButtonLink from './ButtonLink';
+import GithubIcon from './icons/GithubIcon';
 
 const OverflowScrollScreenshot = ({
   project,
@@ -16,11 +18,11 @@ const OverflowScrollScreenshot = ({
   const publicId = getCloudinaryUrl(project.image);
 
   return (
-    <div className="project__intro__screenshot relative mx-auto mb-[120px] max-w-[550px] small:max-w-[40%]">
+    <div className="project__intro__screenshot relative mx-auto mb-[120px] max-w-[550px]  small:min-w-[40%] small:max-w-[40%]">
       <div className="project__intro__screenshot__container__overlay absolute bottom-0 left-0 right-0 z-10 h-[30%] w-full bg-gradient-to-t from-background to-transparent"></div>
       <Link
         href={project.websiteLink}
-        className="absolute bottom-0 w-fit translate-y-[150%] pl-2 font-font_anonymous font-bold tracking-[0.2em] text-[rgba(var(--green-opac),0.6)] underline decoration-transparent transition-colors duration-300 hover:text-[rgba(var(--green-opac),1)] hover:decoration-[rgba(var(--green-opac),1)]"
+        className="absolute bottom-0 w-fit break-words max-w-[90%] translate-y-[150%] pl-2 font-font_anonymous font-bold tracking-[0.2em] text-[rgba(var(--green-opac),0.6)] underline decoration-transparent transition-colors duration-300 hover:text-[rgba(var(--green-opac),1)] hover:decoration-[rgba(var(--green-opac),1)]"
         target="_blank"
       >
         {shortenedUrl}
@@ -41,6 +43,18 @@ const OverflowScrollScreenshot = ({
           </svg>
         </span>
       </Link>
+      <div className='w-fit mt-5 absolute bottom-0 translate-y-[220%]'>
+          {project.githubLink && (
+            <ButtonLink
+            customIcon={<GithubIcon />}
+            buttonType="primary"
+            text="View Source Code"
+            ariaLabel={`view the source code for ${project.title} on Github`}
+            hrefDestination={project.githubLink}
+            target="new window"
+            />
+          )}
+        </div>
       <div className="project__intro__screenshot__container relative max-h-[75vh] min-w-[300px] overflow-scroll">
         <Image
           className="top-0 h-auto w-full"

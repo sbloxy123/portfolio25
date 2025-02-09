@@ -54,7 +54,7 @@ const FilterProjectByTech = ({ projects, onFilterChange }: FilterProps) => {
               className={`badge__item flex w-fit min-w-[70px] cursor-pointer items-center justify-center rounded-md border border-theme_light_orange px-3 py-2 transition-colors duration-300 ${
                 isActive
                   ? 'border-r-theme_dark_orange bg-theme_light_orange text-background'
-                  : 'bg-[rgba(var(--orange-opac),0.1)] text-theme_light_orange hover:bg-[rgba(var(--orange-opac),0.2)]'
+                  : 'bg-[rgba(var(--orange-opac),0.1)] text-theme_light_orange hover:bg-[rgba(var(--orange-opac),0.2)] hover:shadow-[0_0_20px_rgba(var(--orange-opac),0.15)]'
               }`}
               title={`add ${tech} to filter`}
             >

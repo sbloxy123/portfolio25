@@ -25,7 +25,7 @@ const Navbar = () => {
       className={`header  fixed left-0 right-0 top-0 z-20 mx-auto flex min-h-[70px] w-full items-center justify-between border-b-2 border-[rgba(var(--green-opac),0.5)] px-[5%] py-[2rem] backdrop-blur-sm xsmall:min-h-[103px] xsmall:py-[3rem] small:px-layout-small ${toggleMenu ? 'bg-transparent' : 'bg-[rgba(var(--background-opac),0.5)]'} `}
       id="header"
     >
-      <div className="relative ">
+      <div className={`relative transition-all duration-300 ${toggleMenu ? "translate-y-[-110%] opacity-0" : "opacity-100" }`}>
         <Link
           href="/"
           aria-label="Link to homepage"
@@ -35,7 +35,7 @@ const Navbar = () => {
           <span className="small:hidden">.</span>
         </Link>
 
-        <div className="breadcrumbs absolute bottom-0 left-0 m-auto hidden h-fit translate-y-[95%] whitespace-nowrap font-font_anonymous text-[0.5em] font-normal uppercase leading-none tracking-[0.2em] text-theme_green small:inline">
+        <div className={`breadcrumbs absolute bottom-0 left-0 m-auto h-fit whitespace-nowrap font-font_anonymous text-[0.5em] font-normal uppercase leading-none tracking-[0.2em] text-theme_green small:inline ${breadcrumb.length > 2 ? "translate-y-[70px] xsmall:translate-y-[70%]" : "translate-y-[70%] " }`}>
           {pathname === '/' ? (
             ''
           ) : (
@@ -47,7 +47,7 @@ const Navbar = () => {
                     className="text-[clamp(1.4rem,2vw,1.6rem)] underline decoration-transparent decoration-1 underline-offset-4 opacity-80 transition-colors duration-300 hover:decoration-theme_green"
                     aria-label="back to projects page"
                   >
-                    {breadcrumb[1]}
+                    / {breadcrumb[1]}
                   </Link>
                   <span className="text-[clamp(1.4rem,2vw,1.6rem)] opacity-50">
                     <span className="mx-1"> / </span> <span>{breadcrumb[2]}</span>
@@ -58,7 +58,7 @@ const Navbar = () => {
                   className="text-[clamp(1.4rem,2vw,1.6rem)] opacity-80"
                   aria-label="back to projects page"
                 >
-                  {breadcrumb[1]}
+                  / {breadcrumb[1]}
                 </p>
               )}
             </span>
@@ -75,7 +75,7 @@ const Navbar = () => {
       </div>
 
       <button
-        className={`menu__btn fixed right-[5%] top-10 z-20 ml-auto min-h-[3rem] w-fit cursor-pointer font-font_anonymous text-[3rem] uppercase leading-none transition-colors duration-300 hover:text-theme_green xsmall:min-h-[5rem] ${toggleMenu ? 'active top-12 small:right-0 small:mr-[clamp(7rem,7vw,12rem)]' : ''}`}
+        className={`menu__btn fixed right-[5%] top-[2.7rem] z-20 ml-auto min-h-[3rem] w-fit cursor-pointer font-font_anonymous text-[3rem] uppercase leading-none transition-colors duration-300 hover:text-theme_green xsmall:min-h-[5rem] ${toggleMenu ? 'active top-12 small:right-0 small:mr-[clamp(7rem,7vw,12rem)]' : ''}`}
         onClick={() => setToggleMenu(!toggleMenu)}
       >
         <div className="menu__lines">

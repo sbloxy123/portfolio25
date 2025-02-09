@@ -86,7 +86,7 @@ const IconLinks = ({
               title={`${icon.title == 'CV' ? 'Download' : 'Link to'} my ${icon.title}`}
             >
               <icon.component />
-              <span className="pointer-events-none absolute left-[50%] top-[115%] min-w-[5rem] -translate-x-1/2 rounded-sm border border-theme_green bg-white bg-opacity-10 px-2 py-1 text-center text-2xl opacity-0 bg-blend-soft-light backdrop-blur-sm transition-opacity duration-500 group-hover:opacity-100">
+              <span className="pointer-events-none absolute left-[50%] top-[115%] min-w-[5rem] -translate-x-1/2 rounded-sm border border-theme_green bg-white bg-opacity-10 px-2 py-1 text-center text-2xl opacity-0 bg-blend-soft-light backdrop-blur-sm transition-opacity duration-500 group-hover:opacity-100 group-hover:shadow-[0_0_20px_rgba(var(--green-opac),0.25)]">
                 {icon.title}
               </span>
             </Link>
