@@ -2,6 +2,7 @@ import IconLinks, { Icon } from './icons/IconLinks';
 import EnvelopeIcon from './icons/EnvelopeIcon';
 import PhoneIcon from './icons/PhoneIcon';
 import LocationIcon from './icons/Location';
+import Link from 'next/link';
 
 interface ExtendedIcon extends Icon {
   content: string;
@@ -97,6 +98,9 @@ const Footer = () => {
         <div className="footer__icon__links">
           <IconLinks />
         </div>
+        <p className='mt-10 max-w-[500px]'>
+          This site is built with <em>Next.js</em> and <em>Tailwind CSS</em> and the source code can be found on Github - <Link href="https://github.com/sbloxy123/portfolio25" aria-label="view code on Github (opens in new window)" className='text-theme_green tracking-wider uppercase' target='_blank'>View Repository</Link>
+        </p>
       </div>
     </footer>
   );
