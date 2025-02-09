@@ -40,7 +40,7 @@ export default function Projects() {
 
   return (
     <>
-      <div className="mt-[14rem]">
+      <div className="mt-[14rem] small:mt-[20rem]">
         <div className="mx-auto block w-fit px-[2%] text-center">
           <h1 ref={headerRef} className={`block text-center`}>
             <Link
@@ -64,7 +64,7 @@ export default function Projects() {
           <h4 className="pb-4">Filter by tech:</h4>
 
           <FilterProjectByTech projects={projects} onFilterChange={handleFilterChange} />
-          <ul className="projects__list flex flex-wrap justify-center gap-10 pt-10">
+          <ul className="projects__list flex flex-wrap justify-center gap-10 pt-20">
             {filteredProjects.map((project, index) => {
               return (
                 <li key={index} className="">

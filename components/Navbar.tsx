@@ -6,13 +6,14 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { useTitleNav } from '@/contexts/TitleNavContext';
 import { usePathname } from 'next/navigation';
+import Breadcrumbs from './Breadcrumbs';
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const { isTitleInNav } = useTitleNav();
   const pathname = usePathname();
 
-  const breadcrumb = pathname.split('/');
+  // const breadcrumb = pathname.split('/');
 
   // console.log(breadcrumb.length);
 
@@ -25,7 +26,7 @@ const Navbar = () => {
       className={`header  fixed left-0 right-0 top-0 z-20 mx-auto flex min-h-[70px] w-full items-center justify-between border-b-2 border-[rgba(var(--green-opac),0.5)] px-[5%] py-[2rem] backdrop-blur-sm xsmall:min-h-[103px] xsmall:py-[3rem] small:px-layout-small ${toggleMenu ? 'bg-transparent' : 'bg-[rgba(var(--background-opac),0.5)]'} `}
       id="header"
     >
-      <div className={`relative transition-all duration-300 ${toggleMenu ? "translate-y-[-110%] opacity-0" : "opacity-100" }`}>
+      <div className={`relative transition-all duration-300 ${toggleMenu ? "translate-y-[-110%] opacity-0 xsmall:translate-y-0 small:opacity-100 z-20" : "opacity-100" }`}>
         <Link
           href="/"
           aria-label="Link to homepage"
@@ -34,36 +35,7 @@ const Navbar = () => {
           Stuart Bloxham
           <span className="small:hidden">.</span>
         </Link>
-
-        <div className={`breadcrumbs absolute bottom-0 left-0 m-auto h-fit whitespace-nowrap font-font_anonymous text-[0.5em] font-normal uppercase leading-none tracking-[0.2em] text-theme_green small:inline ${breadcrumb.length > 2 ? "translate-y-[70px] xsmall:translate-y-[70%]" : "translate-y-[70%] " }`}>
-          {pathname === '/' ? (
-            ''
-          ) : (
-            <span>
-              {breadcrumb.length > 2 ? (
-                <>
-                  <Link
-                    href="/projects"
-                    className="text-[clamp(1.4rem,2vw,1.6rem)] underline decoration-transparent decoration-1 underline-offset-4 opacity-80 transition-colors duration-300 hover:decoration-theme_green"
-                    aria-label="back to projects page"
-                  >
-                    / {breadcrumb[1]}
-                  </Link>
-                  <span className="text-[clamp(1.4rem,2vw,1.6rem)] opacity-50">
-                    <span className="mx-1"> / </span> <span>{breadcrumb[2]}</span>
-                  </span>
-                </>
-              ) : (
-                <p
-                  className="text-[clamp(1.4rem,2vw,1.6rem)] opacity-80"
-                  aria-label="back to projects page"
-                >
-                  / {breadcrumb[1]}
-                </p>
-              )}
-            </span>
-          )}
-        </div>
+          <Breadcrumbs position='inHeader'/>
       </div>
 
       <div
@@ -75,7 +47,7 @@ const Navbar = () => {
       </div>
 
       <button
-        className={`menu__btn fixed right-[5%] top-[2.7rem] z-20 ml-auto min-h-[3rem] w-fit cursor-pointer font-font_anonymous text-[3rem] uppercase leading-none transition-colors duration-300 hover:text-theme_green xsmall:min-h-[5rem] ${toggleMenu ? 'active top-12 small:right-0 small:mr-[clamp(7rem,7vw,12rem)]' : ''}`}
+        className={`menu__btn fixed right-[5%] top-[2.7rem] small:top-[3.5rem] z-20 ml-auto min-h-[3rem] w-fit cursor-pointer font-font_anonymous text-[3rem] uppercase leading-none transition-colors duration-300 hover:text-theme_green xsmall:min-h-[5rem] ${toggleMenu ? 'active top-12 small:right-0 small:mr-[clamp(7rem,7vw,12rem)]' : ''}`}
         onClick={() => setToggleMenu(!toggleMenu)}
       >
         <div className="menu__lines">
@@ -97,7 +69,7 @@ const Navbar = () => {
           className={`menu fixed right-0 top-0 z-10 w-[70vw] min-w-[340px] max-w-[700px] items-end justify-end transition-all delay-200 duration-300 before:absolute before:inset-0 before:-z-10 before:bg-foreground before:opacity-10 before:backdrop-blur-3xl before:content-[""] small:-right-[clamp(7rem,7vw,12rem)] ${toggleMenu ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}
         >
           <div
-            className={`menu__icon__links absolute bottom-auto left-[5%] right-auto top-8 z-20 m-auto ml-auto h-fit w-[50vw] max-w-[700px] translate-y-2 transition-opacity duration-1000 xsmall:top-12 ${toggleMenu ? 'opacity-100' : 'opacity-0'}`}
+            className={`menu__icon__links absolute bottom-auto left-[5%] right-auto top-8 z-20 m-auto ml-auto h-fit w-[50vw] max-w-[700px] small:top-[3.7rem] translate-y-2 transition-opacity duration-1000 xsmall:top-12 ${toggleMenu ? 'opacity-100' : 'opacity-0'}`}
           >
             <IconLinks menuIsOpen={toggleMenu} />
           </div>

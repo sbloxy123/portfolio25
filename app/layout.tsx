@@ -39,6 +39,7 @@ export default function RootLayout({
       >
         <TitleNavProvider>
           <Navbar />
+          
           <ScrollArrow />
 
           <div className="pattern__bg fixed right-0 top-[70px] small:top-[103px] -z-10 h-[700px] w-[400px]">

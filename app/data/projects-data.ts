@@ -31,7 +31,7 @@ export const projects: ProjectType[] = [
       'Extensive utilisation of Next.js features',
       'Comprehensive integration with Sanity.io, including a live-edit preview mode',
     ],
-    tech: ['Next.js', 'Tailwind CSS', 'JavaScript', 'React', 'TypeScript', 'GitHub', 'Sanity.io CMS'],
+    tech: ['Next.js', 'Tailwind CSS', 'JavaScript', 'React', 'TypeScript', 'GitHub', 'Sanity.io CMS', 'Google Analytics'],
     websiteLink: 'https://www.roscoandperlini.co.uk',
     innerPageLink: 'rosco-and-perlini',
     githubLink: 'https://github.com/sbloxy123/rosco',
@@ -95,11 +95,12 @@ export const projects: ProjectType[] = [
     tech: [
       'Next.js',
       'Tailwind CSS',
-      'Typescript',
+      'TypeScript',
       'React Motion',
       'Figma',
+      'React',
       'Google Analytics',
-      'GitHub'
+      'GitHub',
     ],
     websiteLink: 'https://www.bloxywebservices.co.uk',
     innerPageLink: 'bloxy-web-services',
@@ -135,8 +136,9 @@ export const projects: ProjectType[] = [
       'React Motion',
       'TypeScript',
       'Figma',
+      'React',
       'Google Analytics',
-      'GitHub'
+      'GitHub',
     ],
     websiteLink: 'https://www.dr-mould.co.uk',
     innerPageLink: 'dr-mould',
@@ -156,6 +158,42 @@ export const projects: ProjectType[] = [
       'Subtle text load‐in animations and an animated FAQ section for improved engagement',
       'Comprehensive SEO setup including metadata, JSON‐LD, schema.org markup and Google Analytics integration',
       'TypeScript used throughout for improved maintainability and scalability'
+    ]
+  },
+  {
+    title: 'My Portfolio Site',
+    image: 'portfolio',
+    features: [
+      'Fully responsive design',
+      'Modern Next.js & Tailwind CSS framework',
+      'Component-based architecture for maintainability',
+      'Smooth transitions and engaging loading animations'
+    ],
+    tech: [
+      'Next.js',
+      'Tailwind CSS',
+      'TypeScript',
+      'Figma',
+      'React',
+      'GitHub',
+      'React Motion'
+    ],
+    websiteLink: 'https://www.stuartbloxham.co.uk',
+    innerPageLink: 'my-portfolio-site',
+    githubLink: 'https://github.com/sbloxy123/portfolio25',
+    projectType: 'Self/Freelance',
+    description: [
+      "This website is an integral part of my portfolio, built to showcase my skills in modern web development. It not only demonstrates my technical expertise but also provides an opportunity to inspect the source code via the provided GitHub link."
+    ],
+    fullFeatureList: [
+      'Developed with Next.js and Tailwind CSS to ensure a robust and well‐organised infrastructure for easy management and updates.',
+      'Implemented entirely in TypeScript, focusing on clean, maintainable, and DRY code.',
+      'Custom-designed in Figma with a strong emphasis on intuitive UI/UX.',
+      'Smooth transitions and dynamic loading animations achieved through Tailwind and motion libraries.',
+      'Interactive swipers powered by Swiper.js enhance user engagement.',
+      'Fully responsive layout optimised for mobile, tablet, and desktop screens.',
+      'Source code is hosted on GitHub for version control and deployed on Vercel for seamless updates.',
+      'Built over a few weeks during evenings, utilising a component-based approach to maintain succinct styling and code clarity.'
     ]
   },
   {

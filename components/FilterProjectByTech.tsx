@@ -43,7 +43,7 @@ const FilterProjectByTech = ({ projects, onFilterChange }: FilterProps) => {
   };
 
   return (
-    <ul className="badge__list flex flex-wrap gap-4">
+    <ul className="badge__list flex flex-wrap gap-4 max-w-[750px]">
       {uniqueTech.map((tech, index) => {
         // Is this badge active?
         const isActive = selectedTech.includes(tech);

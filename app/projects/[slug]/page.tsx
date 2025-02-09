@@ -7,6 +7,7 @@ import ProjectsSection from '@/components/sections/ProjectsSection';
 import Stack from '@/components/sections/Stack';
 import ButtonLink from '@/components/ButtonLink';
 import GithubIcon from '@/components/icons/GithubIcon';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export async function generateStaticParams() {
   return projects.map((p) => ({ slug: p.innerPageLink }));
@@ -32,8 +33,12 @@ export default async function Page({ params }: PageProps) {
 
   return (
     <>
-      <div className="project__heading max-w-screen-large mx-auto px-[5%] pt-20 small:px-layout-small">
-        <h1 className="pt-48 text-[clamp(1.8rem,6cqw,2.4rem)]">
+       <div className='breadcrumbs__container relative max-w-screen-large mt-[12rem] mx-auto px-[5%] small:px-layout-small xsmall:mt-[15rem]'>
+          <Breadcrumbs position='inPage'/>
+        </div>
+
+      <div className="project__heading max-w-screen-large mx-auto px-[5%] small:px-layout-small">
+        <h1 className="pt-[3rem] small:pt-20 text-[clamp(1.8rem,6cqw,2.4rem)]">
           <span className="pr-4">Project</span> •{' '}
           <span className="pl-4 font-bold">{project.title}</span>{' '}
           {project.projectType && (
@@ -44,7 +49,7 @@ export default async function Page({ params }: PageProps) {
         </h1>
         <Link
           href={project.websiteLink}
-          className="relative w-fit font-font_anonymous font-bold tracking-[0.2em] text-[rgba(var(--green-opac),0.6)] underline decoration-transparent transition-colors duration-300 hover:text-[rgba(var(--green-opac),1)] hover:decoration-[rgba(var(--green-opac),1)]"
+          className="relative w-fit block mt-4 font-font_anonymous font-bold tracking-[0.2em] text-[rgba(var(--green-opac),0.6)] underline decoration-transparent transition-colors duration-300 hover:text-[rgba(var(--green-opac),1)] hover:decoration-[rgba(var(--green-opac),1)]"
           target="_blank"
         >
           {shortenedUrl}
