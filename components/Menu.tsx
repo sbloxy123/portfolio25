@@ -8,7 +8,7 @@ const menuItems = [
   { href: '/projects', title: 'Projects' },
   { href: '/#stack', title: 'Stack' },
   { href: 'Stuart-Bloxham-CV-web-developer.pdf', title: 'CV' },
-  { href: '/#contact', title: 'Contact' },
+  { href: '/#footer', title: 'Contact' },
 ];
 
 const menuContainer = {
