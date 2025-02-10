@@ -1,3 +1,4 @@
+// .prettierrc.cjs
 module.exports = {
   semi: true,
   trailingComma: 'all',

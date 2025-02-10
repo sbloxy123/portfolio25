@@ -35,7 +35,10 @@ const contactIcon: ExtendedIcon[] = [
 
 const Footer = () => {
   return (
-    <footer id='footer' className="relative bg-background px-[5%] py-40 max-w-screen-large mx-auto small:px-layout-small">
+    <footer
+      id="footer"
+      className="relative mx-auto max-w-screen-large overflow-hidden bg-background px-[5%] pb-[12rem] pt-40 small:px-layout-small"
+    >
       <div className="pattern__bg absolute right-0 top-0 h-[700px] w-[400px]">
         <div className="pattern__overlay"></div>
         <svg width="100%" height="100%">
@@ -98,8 +101,21 @@ const Footer = () => {
         <div className="footer__icon__links">
           <IconLinks />
         </div>
-        <p className='mt-10 max-w-[500px]'>
-          This site is built with <em>Next.js</em> and <em>Tailwind CSS</em> and the source code can be found on Github - <Link href="https://github.com/sbloxy123/portfolio25" aria-label="view code on Github (opens in new window)" className='text-theme_green tracking-wider uppercase' target='_blank'>View Repository</Link>
+      </div>
+      <div className="absolute bottom-[2%] left-0 mx-auto max-w-screen-lg px-[5%] small:px-layout-small">
+        <p className="mt-10 max-w-[500px]">
+          This site is built with{' '}
+          <em className="underline decoration-white/50 underline-offset-4">Next.js</em> and{' '}
+          <em className="underline decoration-white/50 underline-offset-4">Tailwind CSS</em> and the
+          source code can be found on Github -{' '}
+          <Link
+            href="https://github.com/sbloxy123/portfolio25"
+            aria-label="view code on Github (opens in new window)"
+            className="tracking-wider text-theme_green underline decoration-transparent opacity-80 transition-colors duration-300 hover:decoration-theme_green hover:opacity-100"
+            target="_blank"
+          >
+            View Repository
+          </Link>
         </p>
       </div>
     </footer>

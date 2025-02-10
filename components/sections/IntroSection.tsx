@@ -1,5 +1,6 @@
 'use client';
 import IconLinks from '@/components/icons/IconLinks';
+import Link from 'next/link';
 import { useEffect, useState, useRef } from 'react';
 
 const IntroSection = () => {
@@ -52,13 +53,16 @@ const IntroSection = () => {
         <ul className="home__links w-[60%] py-[4rem]">
           {homeLinks.map((link, index) => (
             <li key={index} className="home__links__link relative">
-              <a
+              <Link
+                aria-label={`Navigate to the "${link.title}" section`}
                 className="group flex min-h-[44px] items-center gap-[1.5rem] transition-colors duration-300 hover:text-theme_green"
                 href={link.linkHref}
               >
-                <span className="relative my-auto block h-[1px] w-full bg-foreground before:absolute before:inset-0 before:z-10 before:mx-auto before:block before:h-[100%] before:w-0 before:bg-theme_green before:opacity-0 before:shadow before:shadow-theme_green before:transition-all before:duration-500 before:content-[''] group-hover:before:w-full group-hover:before:opacity-100"></span>
-                <span className="block text-[1.8rem] uppercase tracking-wider">{link.title}</span>
-              </a>
+                <span className="relative my-auto block h-[1px] w-full bg-foreground before:absolute before:inset-0 before:z-10 before:mx-auto before:block before:h-[100%] before:w-0 before:bg-theme_green before:opacity-0 before:transition-all before:duration-500 before:content-[''] group-hover:before:w-full group-hover:before:opacity-100"></span>
+                <span className="block text-[1.8rem] uppercase tracking-wider">
+                  <strong>{link.title}</strong>
+                </span>
+              </Link>
             </li>
           ))}
         </ul>
@@ -69,13 +73,15 @@ const IntroSection = () => {
         <h2 className="section__title">About.</h2>
 
         <p className="text-[clamp(0.8em,2.3cqw,1.1em)]">
-          Proud to call myself a Front End Developer after a challenging journey of making a career
-          change from client facing roles into tech. I have a genuine passion for web development -
-          working full-time within the websites department of a large Ed-Tech company, building a
-          fun mix of websites for schools, trusts, federations and training centres using Vanilla
-          JS, SCSS, HTML and ASP.NET.. whilst continuing my learning by freelancing & self-studying
-          on the side with more modern technologies such as React/Next.js, Typescript, Tailwind and
-          Github.
+          I’m a Front-End Developer who transitioned from client-facing roles into tech after a
+          challenging but rewarding journey. Currently, I work full-time in the websites department
+          of a large Ed-Tech company, building and maintaining diverse sites for schools, trusts,
+          and training centers using <strong>Vanilla JS</strong>, <strong>SCSS</strong>, HTML, and
+          ASP.NET. On the side, I keep sharpening my skills through freelancing and self-study,
+          continuing my learning of <strong>React</strong>, <strong>Next.js</strong>,{' '}
+          <strong>TypeScript</strong>, and <strong>Tailwind</strong>. I&apos;m passionate aboute
+          creating clean, efficient, and user-friendly web experiences and am excited to apply my
+          expertise to new and exciting oportunities.
         </p>
       </div>
     </div>

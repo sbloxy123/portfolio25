@@ -33,12 +33,12 @@ export default async function Page({ params }: PageProps) {
 
   return (
     <>
-       <div className='breadcrumbs__container relative max-w-screen-large mt-[12rem] mx-auto px-[5%] small:px-layout-small xsmall:mt-[15rem]'>
-          <Breadcrumbs position='inPage'/>
-        </div>
+      <div className="breadcrumbs__container relative mx-auto mt-[12rem] max-w-screen-large px-[5%] xsmall:mt-[15rem] small:px-layout-small">
+        <Breadcrumbs position="inPage" />
+      </div>
 
-      <div className="project__heading max-w-screen-large mx-auto px-[5%] small:px-layout-small">
-        <h1 className="pt-[3rem] small:pt-20 text-[clamp(1.8rem,6cqw,2.4rem)]">
+      <div className="project__heading mx-auto max-w-screen-large px-[5%] small:px-layout-small">
+        <h1 className="pt-[3rem] text-[clamp(1.8rem,6cqw,2.4rem)] small:pt-20">
           <span className="pr-4">Project</span> •{' '}
           <span className="pl-4 font-bold">{project.title}</span>{' '}
           {project.projectType && (
@@ -49,7 +49,7 @@ export default async function Page({ params }: PageProps) {
         </h1>
         <Link
           href={project.websiteLink}
-          className="relative w-fit block mt-4 font-font_anonymous font-bold tracking-[0.2em] text-[rgba(var(--green-opac),0.6)] underline decoration-transparent transition-colors duration-300 hover:text-[rgba(var(--green-opac),1)] hover:decoration-[rgba(var(--green-opac),1)]"
+          className="relative mt-4 block w-fit font-font_anonymous font-bold tracking-[0.2em] text-[rgba(var(--green-opac),0.6)] underline decoration-transparent transition-colors duration-300 hover:text-[rgba(var(--green-opac),1)] hover:decoration-[rgba(var(--green-opac),1)]"
           target="_blank"
         >
           {shortenedUrl}
@@ -71,21 +71,21 @@ export default async function Page({ params }: PageProps) {
           </span>
         </Link>
 
-        <div className='w-fit mt-5'>
+        <div className="mt-5 w-fit">
           {project.githubLink && (
             <ButtonLink
-            customIcon={<GithubIcon />}
-            buttonType="primary"
-            text="View Source Code"
-            ariaLabel={`view the source code for ${project.title} on Github`}
-            hrefDestination={project.githubLink}
-            target="new window"
+              customIcon={<GithubIcon />}
+              buttonType="primary"
+              text="View Source Code"
+              ariaLabel={`view the source code for ${project.title} on Github`}
+              hrefDestination={project.githubLink}
+              target="new window"
             />
           )}
         </div>
       </div>
 
-      <section className="project__top max-w-screen-large mx-auto relative flex flex-col-reverse items-start px-[5%] pt-32 small:flex-row small:justify-between small:gap-20 small:px-layout-small">
+      <section className="project__top relative mx-auto flex max-w-screen-large flex-col-reverse items-start px-[5%] pt-32 small:flex-row small:justify-between small:gap-20 small:px-layout-small">
         <article className="project__info font-font_anonymous tracking-[0.1em]">
           <div className="project__description pb-10">
             {project.description?.map((paragraph, index) => (
@@ -109,8 +109,8 @@ export default async function Page({ params }: PageProps) {
       </section>
 
       {project.captionedImages && (
-        <section className="captioned__images max-w-screen-large mx-auto px-[5%] small:px-layout-small">
-          <h2 className="py-20">Bonus Information</h2>
+        <section className="captioned__images mx-auto max-w-screen-large px-[5%] small:px-layout-small">
+          <h2 className="pt-20">Bonus Information.</h2>
 
           {project.captionedImages?.map((captionedImage, index) => {
             const publicId = getCloudinaryUrl(captionedImage.image);

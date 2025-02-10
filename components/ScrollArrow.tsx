@@ -18,7 +18,7 @@ export const ScrollArrow = () => {
   return (
     <div
       id="scrollButton"
-      className="scroll__button__hidden bg-theme_peach-900 fixed bottom-[10%] right-[2rem] z-50 aspect-square w-[4.5rem] rounded-full mix-blend-difference shadow-lg"
+      className="scroll__button__hidden fixed bottom-[10%] right-[2rem] z-50 aspect-square w-[4.5rem] rounded-full mix-blend-difference hover:shadow-[0_0_40px_rgba(var(--orange-opac),0.35)]"
     >
       <a
         href="#header"

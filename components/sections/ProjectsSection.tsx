@@ -15,27 +15,26 @@ const ProjectsSection = () => {
 
   return (
     <section
-      className="projects__section  relative overflow-x-hidden bg-background  pb-28 pt-20 xsmall:mt-20 small"
+      className="projects__section small relative overflow-x-hidden bg-background pb-28 pt-20 xsmall:mt-20"
       id="projects"
     >
-      <div className="max-w-screen-large mx-auto px-[5%] small:px-layout-small overflow-hidden">
+      <div className="mx-auto max-w-screen-large overflow-hidden px-[5%] pb-[2rem] small:px-layout-small">
+        <h2 className="section__title">Projects.</h2>
+        <h4 className="pb-4">Filter by tech:</h4>
+        <FilterProjectByTech projects={projects} onFilterChange={handleFilterChange} />
 
-      <h2 className="section__title">Projects.</h2>
-      <h4 className="pb-4">Filter by tech:</h4>
-      <FilterProjectByTech projects={projects} onFilterChange={handleFilterChange} />
-
-      <div className="projects__container bg-background py-10 xsmall:pb-20">
-        <ProjectSwiper projects={filteredProjects} />
-      </div>
-      <div className="button__link__container mx-auto w-fit">
-        <ButtonLink
-          text="View all Projects"
-          buttonType="primary"
-          ariaLabel="Visit my projects page"
-          hrefDestination="/projects"
+        <div className="projects__container bg-background py-10 xsmall:pb-20">
+          <ProjectSwiper projects={filteredProjects} />
+        </div>
+        <div className="button__link__container mx-auto w-fit">
+          <ButtonLink
+            text="View all Projects"
+            buttonType="primary"
+            ariaLabel="Visit my projects page"
+            hrefDestination="/projects"
           />
+        </div>
       </div>
-          </div>
     </section>
   );
 };
