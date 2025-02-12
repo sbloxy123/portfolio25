@@ -1,13 +1,19 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
+type MenuItem = {
+  href: string;
+  title: string;
+  opensIn?: string;
+};
+
 const menuItems = [
   { href: '/', title: 'Home' },
   { href: '/#about__me', title: 'About Me' },
   { href: '/#experience', title: 'experience' },
   { href: '/projects', title: 'Projects' },
   { href: '/#stack', title: 'Stack' },
-  { href: 'Stuart-Bloxham-CV-web-developer.pdf', title: 'CV' },
+  { href: 'Stuart-Bloxham-CV-web-developer.pdf', title: 'CV', opensIn: '_blank' },
   { href: '/#footer', title: 'Contact' },
 ];
 
@@ -31,15 +37,18 @@ const MenuItem = ({
   href,
   children,
   closeMenu,
+  opensIn,
 }: {
   href: string;
   children: string;
+  opensIn?: string;
   closeMenu: () => void;
 }) => {
   return (
     <motion.li variants={menuItem}>
       <Link
         href={href}
+        target={opensIn}
         className="ml-auto block w-fit min-w-[140px] text-right font-font_anonymous text-[4.8rem] uppercase text-foreground transition-colors duration-300 hover:text-theme_green"
         onClick={() => closeMenu()}
       >
@@ -58,7 +67,7 @@ const Menu = ({ menuIsOpen, closeMenu }: { menuIsOpen: boolean; closeMenu: () =>
       className={`menu__list block h-screen pr-[5vw] pt-[150px] small:mr-[clamp(7rem,7vw,12rem)] small:pr-[clamp(7rem,7vw,12rem)] ${menuIsOpen ? 'active' : ''}`}
     >
       {menuItems.map((item, index) => (
-        <MenuItem key={index} href={item.href} closeMenu={closeMenu}>
+        <MenuItem key={index} href={item.href} closeMenu={closeMenu} opensIn={item.opensIn}>
           {item.title}
         </MenuItem>
       ))}
