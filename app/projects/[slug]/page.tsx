@@ -104,7 +104,6 @@ export default async function Page({ params }: PageProps) {
             ))}
           </ul>
         </article>
-
         <OverflowScrollScreenshot project={project} shortenedUrl={shortenedUrl} />
       </section>
 
