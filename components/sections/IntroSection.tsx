@@ -73,12 +73,12 @@ const IntroSection = () => {
         <h2 className="section__title">About.</h2>
 
         <p className="text-[clamp(0.8em,2.3cqw,1.1em)]">
-          I’m a Front-End Developer who transitioned from client-facing roles into tech after a
-          challenging but rewarding journey. Currently, I work full-time in the websites department
-          of a large Ed-Tech company, building and maintaining diverse sites for schools, trusts,
-          and training centers using <strong>Vanilla JS</strong>, <strong>SCSS</strong>, HTML, and
-          ASP.NET. On the side, I keep sharpening my skills through freelancing and self-study,
-          continuing my learning of <strong>React</strong>, <strong>Next.js</strong>,{' '}
+          I’m a Senior Front-End Developer who transitioned from client-facing roles into tech after
+          a challenging but rewarding journey. Currently, I work full-time in the websites
+          department of a large Ed-Tech company, building and maintaining diverse sites for schools,
+          trusts, and training centers using <strong>Vanilla JS</strong>, <strong>SCSS</strong>,
+          HTML, and ASP.NET. On the side, I keep sharpening my skills through freelancing and
+          self-study, continuing my learning of <strong>React</strong>, <strong>Next.js</strong>,{' '}
           <strong>TypeScript</strong>, and <strong>Tailwind</strong>. I&apos;m passionate aboute
           creating clean, efficient, and user-friendly web experiences and am excited to apply my
           expertise to new and exciting oportunities.

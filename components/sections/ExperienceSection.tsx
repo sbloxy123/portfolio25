@@ -11,7 +11,7 @@ export type ExperienceJobType = {
 
 const experienceList: ExperienceJobType[] = [
   {
-    title: 'Front End Developer',
+    title: 'Senior Front End Developer',
     employer: 'Juniper Education',
     details:
       'Build and maintain websites for an array of education institutions, ensuring  seamless usability and accessibility to their users. Strong focus on creating flexible and playful user interfaces to maximise user engagement. Work closely with cross-functional teams such as Designers, Developers and Project Managers to ensure client satisfaction.',
@@ -23,7 +23,7 @@ const experienceList: ExperienceJobType[] = [
     title: 'Freelance Next.Js Developer',
     employer: 'Bloxy Web Services (self)',
     details:
-      'Designing, building and launching modern and performant sites for local clients with Figma, Next.js 14, Typescript and Tailwind CSS. Work directly with clients to exceed expectations and drive local business visions and objectives into reality. Both working with third party designers and providing designs myself, gaining valuable experience in full website’s lifecycles.',
+      'Designing, building and launching modern and performant sites for local clients with Figma, Next.js 14, Typescript and Tailwind CSS. Work directly with clients to exceed expectations and drive local business visions and objectives into reality. Both working with third party designers and providing designs myself, gaining valuable experience in full website’s lifecycles. I use Sanity.io is my primary CMS which offers clients a highly flexible and user-friendly editing experience. Sanity requires technical integrations, including custom schemas, GROQ queries, and real-time content previews, which provides user-friendly editor workflows and a tightly integrated front end',
     commenceDate: '~2018',
     finalDate: 'PRESENT',
     tech: [
