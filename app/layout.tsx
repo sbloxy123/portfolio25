@@ -25,6 +25,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Stuart Bloxham',
   description: 'Portfolio built by Stuart Bloxham, with Next.js and Tailwind',
+  robots: 'noindex',
 };
 
 export default function RootLayout({
@@ -39,10 +40,10 @@ export default function RootLayout({
       >
         <TitleNavProvider>
           <Navbar />
-          
+
           <ScrollArrow />
 
-          <div className="pattern__bg fixed right-0 top-[70px] small:top-[103px] -z-10 h-[700px] w-[400px]">
+          <div className="pattern__bg fixed right-0 top-[70px] -z-10 h-[700px] w-[400px] small:top-[103px]">
             <div className="pattern__overlay"></div>
             <svg width="100%" height="100%">
               <pattern
