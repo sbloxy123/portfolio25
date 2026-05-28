@@ -3,25 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --background: #10172a;
+  --foreground: #dee3e8;
+  --green: #5eead4;
+  --light-orange: #f7c376;
+  --dark-orange: #d28920;
+  --brown: #6a4c25;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #10172a;
-    --foreground: #dee3e8;
-    --green: #5eead4;
-    --light-orange: #f7c376;
-    --dark-orange: #d28920;
-    --brown: #6a4c25;
+  --orange-opac: 247, 195, 118;
+  --green-opac: 94, 234, 212;
+  --background-opac: 16, 23, 42;
 
-    --orange-opac: 247, 195, 118;
-    --green-opac: 94, 234, 212;
-    --background-opac: 16, 23, 42;
-
-    --layout-margin-small: clamp(7rem, 7vw, 12rem);
-  }
+  --layout-margin-small: clamp(7rem, 7vw, 12rem);
 }
 html {
   font-size: 62.5%;
