@@ -24,11 +24,11 @@ export default async function Page({ params }: PageProps) {
     return notFound();
   }
 
-  const shortenedUrl = project.websiteLink.split('www.')[1];
+  const shortenedUrl = project.websiteLink.replace(/^https?:\/\/(www\.)?/, '');
 
   function getCloudinaryUrl(publicId: string) {
     const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
-    return `https://res.cloudinary.com/${cloudName}/image/upload/v1738792574/my-site/project-captioned-images/rosco/${publicId}.png`;
+    return `https://res.cloudinary.com/${cloudName}/image/upload/v1738792574/my-site/project-captioned-images/${publicId}.png`;
   }
 
   return (
@@ -52,7 +52,7 @@ export default async function Page({ params }: PageProps) {
           className="relative mt-4 block w-fit font-font_anonymous font-bold tracking-[0.2em] text-[rgba(var(--green-opac),0.6)] underline decoration-transparent transition-colors duration-300 hover:text-[rgba(var(--green-opac),1)] hover:decoration-[rgba(var(--green-opac),1)]"
           target="_blank"
         >
-          {shortenedUrl}
+          <span className="line-clamp-1">{shortenedUrl}</span>
           <span className="link__icon absolute bottom-auto left-[103%] top-0 text-theme_green">
             <svg
               width="11"

@@ -340,6 +340,7 @@ ul {
 
 #scrollButton.scroll__button__hidden {
   opacity: 0;
+  pointer-events: none;
 }
 
 

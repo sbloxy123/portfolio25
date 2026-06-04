@@ -38,6 +38,7 @@ export default function RootLayout({
       <body
         className={`${italiana.variable} ${anonymousPro.variable} ${inter.variable} relative antialiased`}
       >
+        <div id="top"></div>
         <TitleNavProvider>
           <Navbar />
 

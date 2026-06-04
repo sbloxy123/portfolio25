@@ -27,7 +27,7 @@ const OverflowScrollScreenshot = ({
         className="absolute bottom-0 w-fit max-w-[90%] translate-y-[150%] break-words pl-2 font-font_anonymous font-bold tracking-[0.2em] text-[rgba(var(--green-opac),0.6)] underline decoration-transparent transition-colors duration-300 hover:text-[rgba(var(--green-opac),1)] hover:decoration-[rgba(var(--green-opac),1)]"
         target="_blank"
       >
-        {shortenedUrl}
+        <span className="line-clamp-1">{shortenedUrl}</span>
         <span className="link__icon absolute bottom-auto left-[103%] top-0 text-theme_green">
           <svg
             width="11"
